@@ -1,9 +1,9 @@
 # Wonderland
 
 ## Created By
-A01321471 — Jillian G.
-A0 — Celine W. 
-A0 — Dani
+Jillian Gonzales,
+Celine W,
+Dani,
 
 ## Description
 This app is for users who experience burnout in their everyday lives, affecting them on a daily basis. 
