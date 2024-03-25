@@ -18,9 +18,9 @@ export default function Home() {
         <div className={styles.description}>
           <p>
 <<<<<<< HEAD
-            Get started with editing&nbsp;
+            Get started on editing&nbsp;
 =======
-            Get started with editing&nbsp;
+            Get started on editing&nbsp;
 >>>>>>> dev
             <code className={styles.code}>pages/index.js</code>
           </p>
