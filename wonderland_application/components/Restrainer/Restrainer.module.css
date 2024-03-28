@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    min-height: var(--screenHeight);
+}
+
+.container {
+    min-width: var(--screenWidth);
+    max-width: var(--screenWidth);
+}
