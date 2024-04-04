@@ -47,7 +47,7 @@
 }
 
 .buttonA {
-    margin-bottom: 10px; 
+    margin-bottom: 20px; /* Increase the bottom margin */
 }
 
 /* Media query for specific screen sizes */
@@ -64,9 +64,5 @@
         border: 3px solid var(--main-blue);
         border-radius: 20px;
         cursor: pointer;
-    }
-
-    .buttonA {
-        margin-bottom: 10px; 
     }
 }

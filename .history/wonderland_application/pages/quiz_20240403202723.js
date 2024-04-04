@@ -24,8 +24,7 @@ export default function Quiz() {
             </div>
             <div>
                 <Image src={leftarrowtri} alt="Left Arrow" width={10} height={10} />
-                <button className={style.buttonB}>Worry about how late you're going <br />
-                 to be for your next appointment.</button>
+                <button className={style.buttonB}>Worry about how late you're going to be for your next appointment.</button>
                 <Image src={rightarrowtri} alt="Right Arrow" width={10} height={10} />
             </div>
         </div>

@@ -29,6 +29,7 @@
     margin: 20px 0; 
 }
 
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -36,18 +37,16 @@
     margin: 20px 0;
 }
 
+/* Styles for the buttons A and B */
 .buttonA, .buttonB {
-    padding: 10px 20px; 
-    margin: 0 10px; 
-    background-color: var(--white-button);
-    color: var(--main-blue);
-    border: 3px solid var(--main-blue);
-    border-radius: 20px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Space between buttons and arrows */
+    background-color: var(--main-blue);
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners for buttons */
     cursor: pointer;
-}
-
-.buttonA {
-    margin-bottom: 10px; 
+    font-size: 16px; /* Adjust font-size as needed */
 }
 
 /* Media query for specific screen sizes */
@@ -57,16 +56,9 @@
     }
   
     .buttonA, .buttonB {
-        padding: 10px 20px; 
-        margin: 0 10px; 
-        background-color: var(--white-button);
-        color: var(--main-blue);
+        width: 200px;
+        height: 80px;
         border: 3px solid var(--main-blue);
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .buttonA {
-        margin-bottom: 10px; 
+        border-radius: 80%;
     }
 }

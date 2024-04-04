@@ -46,10 +46,6 @@
     cursor: pointer;
 }
 
-.buttonA {
-    margin-bottom: 10px; 
-}
-
 /* Media query for specific screen sizes */
 @media screen and (min-width: 430px) and (max-width: 932px) {
     .question {
@@ -64,9 +60,5 @@
         border: 3px solid var(--main-blue);
         border-radius: 20px;
         cursor: pointer;
-    }
-
-    .buttonA {
-        margin-bottom: 10px; 
     }
 }

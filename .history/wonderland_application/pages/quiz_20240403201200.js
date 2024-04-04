@@ -18,14 +18,12 @@ export default function Quiz() {
             <Image src={q1} alt="Question" width={200} height={200} />
             <div>
                 <Image src={leftarrowtri} alt="Left Arrow" width={10} height={10} />
-                <button className={style.buttonA}>Feel excited and curious about <br />
-                 what's below.</button>
+                <button className={style.buttonA}>Feel excited and curious about what's below.</button>
                 <Image src={rightarrowtri} alt="Right Arrow" width={10} height={10} />
             </div>
             <div>
                 <Image src={leftarrowtri} alt="Left Arrow" width={10} height={10} />
-                <button className={style.buttonB}>Worry about how late you're going <br />
-                 to be for your next appointment.</button>
+                <button className={style.buttonB}>Worry about how late you're going to be for your next appointment.</button>
                 <Image src={rightarrowtri} alt="Right Arrow" width={10} height={10} />
             </div>
         </div>
