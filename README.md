@@ -2,8 +2,7 @@
 
 ## Created By
 Jillian Gonzales,
-Celine Wang,
-Danika Durano
+Celine Wang
 
 ## Description
 This app is for users who experience burnout in their everyday lives, affecting them on a daily basis. 
