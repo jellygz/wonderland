@@ -1,3 +1,4 @@
+/* jillian */
 .main {
     display: flex;
     flex-direction: column;
@@ -66,3 +67,14 @@
     margin-right: auto;
     width: fit-content;
 }
+
+/* celine */
+/* .main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 20vh;
+} */
+

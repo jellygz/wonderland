@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures at least full height of the viewport */
+    background-color: #FEE4CB; /* Example background color based on your image */
+    color: #3C3C3C; /* Example text color */
+    font-family: 'Arial', sans-serif; /* Example font-family */
+    padding: 2rem; /* Padding to ensure content doesn't touch the edges */
+  }
+  
+  h1 {
+    margin-bottom: 2rem; /* Space below the header */
+    font-size: 2.5rem; /* Example font size for the header */
+  }
+  
+  .question {
+    margin: 1rem 0; /* Space above and below the question */
+    background-color: var(--main-blue); /* Placeholder for your color variable */
+    color: white; /* Text color for the question */
+    padding: 1rem;
+    border-radius: 0.5rem; /* Rounded corners for the question box */
+    max-width: 90%; /* Maximum width to prevent too wide on larger screens */
+    text-align: center; /* Centers text within the question box */
+  }
+  
+  .question p {
+    margin: 0; /* Removes default paragraph margin */
+  }
+  
+  .imageContainer {
+    /* Container for images to control their layout */
+    margin: 2rem 0; /* Space above and below image container */
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center; /* Centers the navigation buttons */
+    align-items: center; /* Vertically centers items within navigation */
+    gap: 1rem; /* Space between navigation items */
+    margin: 1rem 0; /* Space above and below navigation */
+  }
+  
+  .buttonA, .buttonB {
+    background-color: var(--main-blue); /* Placeholder for your color variable */
+    color: white; /* Text color for buttons */
+    padding: 0.5rem 1rem; /* Padding inside the buttons */
+    border: none; /* No border for the buttons */
+    border-radius: 2rem; /* Rounded edges for the buttons */
+    cursor: pointer; /* Changes the mouse cursor on hover */
+    font-size: 1rem; /* Example font size for button text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .buttonA:hover, .buttonB:hover {
+    background-color: darken(var(--main-blue), 10%); /* Darkens the button on hover */
+  }
+  
+  /* Media query for iPhone 14 Pro Max */
+  @media screen and (min-width: 430px) and (max-width: 932px) {
+    /* Styles specifically for iPhone 14 Pro Max screen size */
+    .question {
+      /* Additional styles for the question box if needed */
+    }
+  
+    .buttonA, .buttonB {
+      /* Additional styles for the buttons if needed */
+    }
+  }
+  
