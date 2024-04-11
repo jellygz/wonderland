@@ -19,13 +19,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 5px 0;
 }
 
 .quizButtons {
-    border: solid 1px var(--main-blue);
+    border: solid 2px var(--main-blue);
     height: 3rem;
     width: 20rem;
+    background-color: #FFFF;
+    border-radius: 20px;
 }
 
 .arrow {
