@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Restrainer>
-        <main className={`${styles.main} ${inter.className}`}>
+        <main className={`${styles.main}`}>
           <div className={styles.aliceContainer}>
             <Image className={styles.alice} src="/Alice.png" alt="Alice" width={450} height={400} />
           </div>
