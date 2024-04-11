@@ -1,15 +1,37 @@
 import QuizTemplate from "@/Components/QuizTemplate";
 import { useState } from "react";
-import Quiz5_image from "@/public/images/q5.png"
+import Quiz5_image from "@/public/images/q5.png";
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Quiz5() {
     const [chapterNumber] = useState(5); 
-    const question = "You're invited to a bizarre You find yourself at the Queen's croquet ground. How do you play the game?tea party. How do you handle the situation?";
+    const router = useRouter();
+    const searchParams = useSearchParams()
+    const recordA= searchParams.get("rdA")
+    const recordB= searchParams.get("rdB")
 
+    console.log("recordA, recordB", recordA, recordB)
+
+    const question = (
+        <div>
+            As you trail along Alice down the winding <br /> forest path, you trip into a steep rabbit hole <br /> A fleeting minute slips by, yet you still <br /> feel the sensation of yourself falling down... <br /> What would cross your mind amidst the fall?
+        </div>
+    );
     const options = [
-        { text: "By trying to follow the rules, even though they keep changing." },
-        { text: "By using a flamingo as a mallet because that seems to be the trend." },
+        { textA: (
+            <div>
+                Start to wonder and feel curiosity <br /> about the adventures down below...
+            </div>
+        ) },
+        { textB: (
+            <div>
+                Start to question whether or not to try <br /> and grab onto something to stop the fall.
+            </div>
+        ) },
     ];
+    
+    const [countA,setCountA] = useState(4);
+    const [countB,setCountB] = useState(4);
 
     return (
         <div>
@@ -18,6 +40,10 @@ export default function Quiz5() {
                 question={question}
                 imageSrc={Quiz5_image}
                 options={options}
+                prevName="Previous"
+                prevRouterName="/quiz4"
+                nextName="Next"
+                nextRouterName="/quiz6"
             />
         </div>
     );

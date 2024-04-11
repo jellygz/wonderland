@@ -1,15 +1,37 @@
 import QuizTemplate from "@/Components/QuizTemplate";
 import { useState } from "react";
-import Quiz4_image from "@/public/images/q4.png"
+import Quiz4_image from "@/public/images/q4.png";
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Quiz4() {
     const [chapterNumber] = useState(4); 
-    const question = "You're invited to a bizarre tea party. How do you handle the situation?";
+    const router = useRouter();
+    const searchParams = useSearchParams()
+    const recordA= searchParams.get("rdA")
+    const recordB= searchParams.get("rdB")
 
+    console.log("recordA, recordB", recordA, recordB)
+
+    const question = (
+        <div>
+            As you trail along Alice down the winding <br /> forest path, you trip into a steep rabbit hole <br /> A fleeting minute slips by, yet you still <br /> feel the sensation of yourself falling down... <br /> What would cross your mind amidst the fall?
+        </div>
+    );
     const options = [
-        { text: "With a confident explanation of who you are and your purpose." },
-        { text: "By questioning the caterpillar back, 'Who are YOU?'" },
+        { textA: (
+            <div>
+                Start to wonder and feel curiosity <br /> about the adventures down below...
+            </div>
+        ) },
+        { textB: (
+            <div>
+                Start to question whether or not to try <br /> and grab onto something to stop the fall.
+            </div>
+        ) },
     ];
+    
+    const [countA,setCountA] = useState(3);
+    const [countB,setCountB] = useState(3);
 
     return (
         <div>
@@ -18,6 +40,10 @@ export default function Quiz4() {
                 question={question}
                 imageSrc={Quiz4_image}
                 options={options}
+                prevName="Previous"
+                prevRouterName="/quiz3"
+                nextName="Next"
+                nextRouterName="/quiz5"
             />
         </div>
     );

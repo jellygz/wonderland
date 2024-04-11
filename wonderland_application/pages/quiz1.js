@@ -1,15 +1,29 @@
 import QuizTemplate from "@/Components/QuizTemplate";
 import { useState } from "react";
-import Quiz1_image from "@/public/images/q1.png"
+import Quiz1_image from "@/public/images/q1.png";
 
 export default function Quiz1() {
     const [chapterNumber] = useState(1); 
-    const question = "You've just followed a hurried rabbit down a rabbit hole. What's your first reaction?";
+    const question = (
+        <div>
+            As you trail along Alice down the winding <br /> forest path, you trip into a steep rabbit hole <br /> A fleeting minute slips by, yet you still <br /> feel the sensation of yourself falling down... <br /> What would cross your mind amidst the fall?
+        </div>
+    );
     const options = [
-        { text: "Feel excited and curious about what's below." },
-        { text: "Worry about how late you're going to be for your next appointment." },
+        { textA: (
+            <div>
+                Start to wonder and feel curiosity <br /> about the adventures down below...
+            </div>
+        ) },
+        { textB: (
+            <div>
+                Start to question whether or not to try <br /> and grab onto something to stop the fall.
+            </div>
+        ) },
     ];
-    const buttonName="back";
+
+    const [countA,setCountA] = useState(0);
+    const [countB,setCountB] = useState(0);
 
     return (
         <div>
@@ -18,7 +32,12 @@ export default function Quiz1() {
                 question={question}
                 imageSrc={Quiz1_image}
                 options={options}
-                buttonName={buttonName}
+                prevName="Intro"
+                prevRouterName="/quizIntro"
+                nextName="Next"
+                nextRouterName="/quiz2"
+                countA={countA}
+                countB={countB}
             />
         </div>
     );

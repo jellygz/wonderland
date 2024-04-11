@@ -1,19 +1,17 @@
 import { useEffect } from 'react';
-import { Application } from '@splinetool/runtime';
 import Buttons from '@/Components/Buttons';
+import Image from 'next/image';
+import gifImage from '../public/gifs/blue_ball_bb.gif';
+
 
 export default function QuizIntro() {
-    // useEffect(() => {
-    //     const canvas = document.getElementById('canvas3d');
-    //     const app = new Application(canvas);
-    //     app.load('https://prod.spline.design/vIhs7-UOuotuB-f4/scene.splinecode');
-    // }, []); 
+    
 
     return (
         <>
-            <div id="canvas3d" style={{ width: 200, height: 200 }}>
-                {/* Spline 3D canvas will be attached here */}
-            </div>
+           <div>
+           <Image src={gifImage} alt="spline ball" />
+           </div>
             <div>
                 <p>Your memory has been erased <br />
                 Take your time to relax <br />
@@ -24,6 +22,9 @@ export default function QuizIntro() {
             </div>
             <Buttons 
             buttonName="Start"
+            routerName="/quiz1"
+            recordA={0}
+            recordB={0}
             />
         </>
     );
