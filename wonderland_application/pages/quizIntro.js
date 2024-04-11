@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Application } from '@splinetool/runtime';
-import Buttons from '@/Components/Buttons';
+import Buttons from '@/components/Buttons';
 
 export default function QuizIntro() {
     // useEffect(() => {
