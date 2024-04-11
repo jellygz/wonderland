@@ -1,0 +1,63 @@
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: var(--white-bg); 
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 0 0 20px 0; 
+    font-size: 24px; 
+    font-family: var(--chapter-font);
+}
+
+
+.question {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: var(--main-blue);
+    color: var(--white-bg); 
+    border-radius: 8px; 
+}
+
+.imageContainer {
+    margin: 20px 0; 
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.buttonA, .buttonB {
+    padding: 10px 20px; 
+    margin: 0 10px; 
+    background-color: var(--white-button);
+    color: var(--main-blue);
+    border: 3px solid var(--main-blue);
+    row-gap: 10px;
+    border-radius: 20px; /* Rounded corners for buttons */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font-size as needed */
+}
+
+/* Media query for specific screen sizes */
+@media screen and (min-width: 430px) and (max-width: 932px) {
+    .question {
+        background-color: var(--main-blue);
+    }
+  
+    .buttonA, .buttonB {
+        width: 200px;
+        height: 80px;
+        border: 3px solid var(--main-blue);
+        border-radius: 80%;
+    }
+}

@@ -1,4 +1,5 @@
 :root {
+  /* jillian */
   --white:#EBEBEB;
   --black:#0C0C0C;
   --mainblue:#627CA9;
@@ -6,4 +7,15 @@
   --screenHeight:932px;
   --screenSpacingHorizontal:2rem;
   --screenSpacingVertical:4rem;
+
+  /* celine */
+  --white-bg: #EBEBEB;
+  --white-button: #fff;
+  --main-blue: #627CA9;
+  --background-gray: #0C0C0C;
+  --main-red: #8B0000;
+  --main-gold: #D4AF37;
+  --blue: #3C5880;
+  --dark-blue: #041732;
+  --chapter-font: "Cardo";
 }
