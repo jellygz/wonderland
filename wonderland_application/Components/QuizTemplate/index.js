@@ -1,26 +1,42 @@
-import Image from "next/image";
-import style from "./QuizTemplate.module.css";
-import Buttons from "@/components/Buttons";
-import Restrainer from "../Restrainer";
+"use client"
 
-export default function QuizTemplate({ chapterNumber, question, imageSrc, options,buttonName }) {
+import { useState } from "react";
+import Image from "next/image";
+// components
+import Buttons from "@/components/Buttons";
+import Restrainer from "@/components/Restrainer";
+import QuizButton from "@/components/QuizButton";
+// styles
+import style from "./QuizTemplate.module.css";
+
+export default function QuizTemplate({ chapterNumber, question, imageSrc, options, buttonName }) {
+
+    const [activeOption, setActiveOption] = useState(null);
+
+    const handleOptionClick = (index) => {
+        setActiveOption(index);
+    };
+
     return (
         <Restrainer>
             <div className={style.container}>
                 <h1>Chapter {chapterNumber}</h1>
-                <Image src={imageSrc} alt="Question Image" width={200} height={200} />
                 <div className={style.question}>
                     <p>{question}</p>
                 </div>
+                <Image src={imageSrc} alt="Question Image" width={200} height={200} />
                 {options.map((option, index) => (
                     <div key={index}>
-                        <Image src="/images/leftarrowtri.svg" alt="Left Arrow" width={10} height={10} />
-                        <button className={style[`button${index + 1}`]}>{option.text}</button>
-                        <Image src="/images/rightarrowtri.svg" alt="Right Arrow" width={10} height={10} />
+                        <QuizButton 
+                            text={option.text}
+                            isIndex={index}
+                            isActive={activeOption === index}
+                            onClick={() => handleOptionClick(index)}
+                        />
                     </div>
                 ))}
             <Buttons 
-                    buttonName={buttonName}
+                buttonName={buttonName}
             />
             
             </div>

@@ -1,6 +1,7 @@
-import QuizTemplate from "@/components/QuizTemplate";
-import Restrainer from "@/components/Restrainer";
 import { useState } from "react";
+// components
+import QuizTemplate from "@/components/QuizTemplate";
+// assets
 import Quiz1_image from "@/public/images/q1.png"
 
 export default function Quiz1() {
