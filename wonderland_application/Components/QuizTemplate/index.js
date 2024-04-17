@@ -5,12 +5,15 @@ import style from "./QuizTemplate.module.css";
 import Buttons from "@/components/Buttons";
 import Restrainer from "../Restrainer";
 import { useState } from "react";
+import { useRecordContext } from "@/hooks/useRecordContext";
+import { useRouter } from "next/router";
 
-export default function QuizTemplate({ chapterNumber, question, imageSrc, options, prevName, nextName, prevRouterName, nextRouterName, countA, countB }) {
-    console.log(options)
-    console.log("quizTemplate", countA, countB)
-    const [ctA,setCountA] = useState(countA);
-    const [ctB,setCountB] = useState(countB);
+export default function QuizTemplate({ chapterNumber, question, imageSrc, options }) {
+    // const [ctA,setCountA] = useState(countA);
+    // const [ctB,setCountB] = useState(countB);
+
+    const {handleClickCountA, handleClickCountB, ctA, ctB} = useRecordContext()
+    const router = useRouter()
 
     return (
         
@@ -24,26 +27,27 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
         
                     <div>
                         <Image src="/images/leftarrowtri.svg" alt="Left Arrow" width={10} height={10} />
-                        <button className={style.buttonA} onClick={()=>setCountA(prev=>prev +1)}>{options[0].textA}</button>
+                        <button className={style.buttonA} onClick={handleClickCountA}>{options[0].textA}</button>
                         <Image src="/images/rightarrowtri.svg" alt="Right Arrow" width={10} height={10} />
                     </div>
                     
                     <div>
                     <Image src="/images/leftarrowtri.svg" alt="Left Arrow" width={10} height={10} />
-                        <button className={style.buttonB} onClick={()=>setCountB(prev=>prev +1)}>{options[1].textB}</button>
+                        <button className={style.buttonB} onClick={handleClickCountB}>{options[1].textB}</button>
                         <Image src="/images/rightarrowtri.svg" alt="Right Arrow" width={10} height={10} />
                     </div>
                     
-    
+            {router.query.id !== "1" && 
             <Buttons 
-                    buttonName={prevName}
-                    routerName={prevRouterName}
+                    buttonName="BACK"
+                    routerName={String(Number(router.query.id) - 1)}
                     recordA={ctA}
                     recordB={ctB}
             />
+            }
             <Buttons
-                    buttonName={nextName}
-                    routerName={nextRouterName}
+                    buttonName="NEXT"
+                    routerName={String(Number(router.query.id) + 1)}
                     recordA={ctA}
                     recordB={ctB}
             />

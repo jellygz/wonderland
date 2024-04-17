@@ -1,10 +1,12 @@
 import style from './Buttons.module.css';
 import { useRouter } from 'next/navigation';
+import { useRecordContext } from '@/hooks/useRecordContext';
 
 export default function Buttons({buttonName, routerName, recordA, recordB}) {
     const router = useRouter()
-    const rdA = recordA; 
-    const rdB = recordB;
+    const {ctA, ctB} = useRecordContext()
+    const rdA = ctA;
+    const rdB = ctB;
 
     return(
     <div className={style.quizButton}>
