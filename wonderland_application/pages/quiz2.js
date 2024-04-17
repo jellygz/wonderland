@@ -1,4 +1,4 @@
-import QuizTemplate from "@/Components/QuizTemplate";
+import QuizTemplate from "@/components/QuizTemplate";
 import { useState } from "react";
 import Quiz2_image from "@/public/images/q2.png";
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -44,6 +44,8 @@ export default function Quiz2() {
                 prevRouterName="/quiz1"
                 nextName="Next"
                 nextRouterName="/quiz3"
+                countA={countA}
+                countB={countB}
             />
         </div>
     );

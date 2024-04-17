@@ -1,4 +1,4 @@
-import QuizTemplate from "@/Components/QuizTemplate";
+import QuizTemplate from "@/components/QuizTemplate";
 import { useState } from "react";
 import Quiz1_image from "@/public/images/q1.png";
 

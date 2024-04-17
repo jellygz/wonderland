@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./QuizTemplate.module.css";
-import Buttons from "@/Components/Buttons";
+import Buttons from "@/components/Buttons";
 import { useState } from "react";
 
 export default function QuizTemplate({ chapterNumber, question, imageSrc, options, prevName, nextName, prevRouterName, nextRouterName, countA, countB }) {
