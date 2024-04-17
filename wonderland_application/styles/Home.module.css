@@ -1,9 +1,80 @@
+/* jillian */
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    height: 100%;
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+}
+
+.alice {
+    height: auto;
+}
+
+.aliceContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.wonderlandLogo {
+    height: auto;
+}
+
+.wonderlandLogoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.mainButton {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.button {
+    animation: buttonAnimation 7s linear infinite;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+@keyframes buttonAnimation {
+    from {transform:rotate(0)}
+    to {transform:rotate(360deg)}
+}
+
+.arrowButton {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+/* celine */
+/* .main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 20vh;
-}
+} */
 

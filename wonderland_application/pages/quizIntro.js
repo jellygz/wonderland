@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import Buttons from '@/Components/Buttons';
+import { Application } from '@splinetool/runtime';
+import Buttons from '@/components/Buttons';
 import Image from 'next/image';
 import gifImage from '../public/gifs/blue_ball_bb.gif';
 
