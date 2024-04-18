@@ -2,10 +2,31 @@ import { RecordContextProvider } from "@/context/RecordContext";
 import { useRouter } from "next/router";
 // components
 import QuizTemplate from "@/components/QuizTemplate";
+import { useEffect } from "react";
 
 export default function Quiz() {
 
     const router = useRouter()
+    useEffect(()=>{
+        const handleKeyboard = (event) =>{
+            if (event.key == "ArrowRight") {
+                const nextId = Number(router.query.id) + 1
+                if (nextId <= 6) {
+                    router.push(`/quiz/${nextId}`)
+                }
+            }
+            else if (event.key == "ArrowLeft"){
+                const prevId = Number(router.query.id) - 1
+                if(prevId >= 1) {
+                    router.push(`/quiz/${prevId}`)
+                }
+            }
+        }
+        document.addEventListener('keydown', handleKeyboard);
+        return () => {
+            document.removeEventListener('keydown', handleKeyboard);
+        }
+    },[router])
 
     const questionValue = (id) => {
         switch(id) {
