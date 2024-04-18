@@ -5,11 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link
-          href="https://fonts.google.com/specimen/Josefin+Sans"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.google.com/specimen/Cardo"
+          href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
           rel="stylesheet"
         />
       </Head>
