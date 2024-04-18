@@ -19,23 +19,25 @@ export default function quizOutro() {
   return (
     <RecordContextProvider>
     <Restrainer>
-    <div>Spline</div>
-    <div>
-        <p>How was your walk? <br /> Do you remember who you are?</p>
-        <input
-            onChange={(e) => setInputValue(e.target.value)} 
-            placeholder='Enter your name...' 
-        />
-    <div>
-        <button 
-        className={styles.quizOutroButton}
-        onClick={handleClick}
-        >
-            Enter
-        </button>
+    <main className={styles.main}>
+        {/* <div>Spline</div> */}
+        <div className={styles.enterNameContainer}>
+            <p classname={styles.enterNameText}>How was your walk? <br /> Do you remember who you are?</p>
+            <input
+                classname={styles.inputBar}
+                onChange={(e) => setInputValue(e.target.value)} 
+                placeholder='Enter your name...' 
+            />
+        <div className={styles.buttonContainer}>
+            <button 
+            className={styles.quizOutroButton}
+            onClick={handleClick}
+            >
+                Enter
+            </button>
+        </div>
     </div>
-    </div>
-    
+    </main>
     </Restrainer>
     </RecordContextProvider>
   )
