@@ -36,11 +36,12 @@
 .question {
     margin: 20px 0;
     padding: 18px;
+    width: 280px;
     background-color: var(--mainblue);
     color: var(--white); 
     border-radius: 7px; 
     font-family: 'Josefin Sans';
-    font-size: small;
+    font-size: 13.5px;
     text-align: left;
 }
 

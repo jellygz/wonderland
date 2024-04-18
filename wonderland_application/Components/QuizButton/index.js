@@ -3,10 +3,14 @@ import Image from "next/image"
 // styles
 import style from "./QuizButton.module.css"
 
-export default function QuizButton({ text, isIndex, onClick, isActive }) {
+export default function QuizButton({ text, onClick, isActive, id }) {
 
   return (
-    <div className={style.quizButtonContainer} onClick={onClick}>
+    <div
+      id={id}
+      className={style.quizButtonContainer} 
+      onClick={onClick}
+    >
         <Image 
             src="/images/leftarrowtri.svg" 
             alt="Left Arrow" 
