@@ -5,18 +5,18 @@
 
 .quizButton button {
     padding: 10px 20px;
-    background-color: #ffffff; 
-    color: #007bff; 
-    border: 3px solid #007bff; 
-    border-radius: 20px;
+    background-color: #3C5880;
+    color: #fff;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s; 
-    width: 250px; 
-    height: 60px; 
-    font-size: 18px; 
+    width: 98px; 
+    height: 38px; 
+    font-size: 15px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
 }
 
 .quizButton button:hover {
-    background-color: #0056b3; 
-    color: #ffffff; 
+    background-color: #fff;
+    color: #3C5880;
 }

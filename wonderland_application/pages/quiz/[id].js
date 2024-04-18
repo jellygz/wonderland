@@ -16,7 +16,7 @@ export default function Quiz() {
             break
             case "2" :
                 return (<div>
-                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and 
+                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and and that you are not supposed to be <br /> here...
             </div>)
             break
             case "3" :

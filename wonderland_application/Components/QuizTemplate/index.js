@@ -19,11 +19,11 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
         
         <Restrainer>
             <div className={style.container}>
-                <h1>Chapter {chapterNumber}</h1>
-                <Image src={imageSrc} alt="Question Image" width={200} height={200} />
+                <h1 className={style.h1}>CHAPTER {chapterNumber}</h1>
                 <div className={style.question}>
                     <div>{question}</div>
                 </div>
+                <Image src={imageSrc} alt="Question Image" width={250} height={250} />
         
                     <div>
                         <Image src="/images/leftarrowtri.svg" alt="Left Arrow" width={10} height={10} />

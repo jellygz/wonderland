@@ -1,3 +1,10 @@
+.h1 {
+    font-family: var(--chapter-font);
+    font-size: medium;
+    /* font-weight: bold; */
+    color: var(--mainblue)
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -15,19 +22,22 @@
 .header {
     margin: 0 0 20px 0; 
     font-size: 24px; 
-    font-family: var(--chapter-font);
-}
-
-.question {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: var(--main-blue);
-    color: var(--white-bg); 
-    border-radius: 8px; 
+    /* font-family: var(--chapter-font); */
 }
 
 .imageContainer {
     margin: 20px 0; 
+}
+
+.question {
+    margin: 20px 0;
+    padding: 18px;
+    background-color: var(--mainblue);
+    color: var(--white); 
+    border-radius: 7px; 
+    font-family: 'Josefin Sans';
+    font-size: small;
+    text-align: left;
 }
 
 .navigation {
@@ -41,12 +51,14 @@
     padding: 10px 20px; 
     margin: 0 10px; 
     background-color: var(--white-button);
-    color: var(--main-blue);
-    border: 3px solid var(--main-blue);
-    border-radius: 20px;
+    color: var(--mainblue);
+    border: 2px solid var(--mainblue);
+    border-radius: 40px;
     cursor: pointer;
-    width: 250px;
+    width: 290px;
     height: 60px;
+    font-family: 'Josefin Sans';
+    text-align: left;
 }
 
 .buttonA {
