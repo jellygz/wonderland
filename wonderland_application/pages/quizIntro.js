@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { Application } from '@splinetool/runtime';
 import Buttons from '@/components/Buttons';
 import Image from 'next/image';
 import gifImage from '../public/gifs/blue_ball_bb.gif';
+import { RecordContextProvider } from '@/context/RecordContext';
+import Restrainer from '@/components/Restrainer';
 
 
 export default function QuizIntro() {
@@ -10,6 +11,8 @@ export default function QuizIntro() {
 
     return (
         <>
+        <RecordContextProvider>
+        <Restrainer>
            <div>
            <Image src={gifImage} alt="spline ball" />
            </div>
@@ -23,10 +26,12 @@ export default function QuizIntro() {
             </div>
             <Buttons 
             buttonName="Start"
-            routerName="/quiz1"
+            routerName="/quiz/1"
             recordA={0}
             recordB={0}
             />
+        </Restrainer>
+        </RecordContextProvider>
         </>
     );
 }

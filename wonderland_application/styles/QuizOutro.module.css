@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    height: 100%;
+}
+
+.enterNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enterNameContainer p {
+    color: var(--white);
+    text-align: center;
+    font-family: 'Josefin Sans';
+}
+
+.enterNameContainer input {
+    padding: 8.5px;
+    width: 12rem;
+    border: 1.5px solid var(--white);
+    border-radius: 8px;
+    background-color: var(--black);
+    margin-top: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+}
+.buttonContainer button {
+    padding: 10px 20px;
+    background-color: #3C5880;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 98px; 
+    height: 38px; 
+    font-size: 15px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    border: none;
+}

@@ -67,16 +67,10 @@ export default function Quiz() {
         switch(id) {
             case "1" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    { textA: "Start to wonder and feel curiosity about the adventures down below..."
+                     },
+                    { textB: "Start to question whether or not to try and grab onto something to stop the fall." 
+                    },
                 ];
             break
             case "2" :
