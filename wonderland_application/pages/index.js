@@ -5,6 +5,7 @@ import Link from "next/link";
 import Restrainer from "@/components/Restrainer";
 import MainNav from "@/components/MainNav";
 import { RecordContextProvider } from "@/context/RecordContext";
+import ChatBot from "@/components/ChatBot";
 
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
               </div>
               <Image className={styles.cardQueen} src="/queen 1.png" alt="Queen Card" width={70} height={70} />
             </div>
+            <ChatBot />
           </main>
         </RecordContextProvider>
       </Restrainer>
