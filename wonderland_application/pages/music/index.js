@@ -1,6 +1,7 @@
 import { useState,useEffect,useRef } from "react";
 import styles from "./Music.module.css"
 import Image from "next/image"
+import Restrainer from "@/components/Restrainer";
 
 export default function Music() {
     const allSongs = [
@@ -97,6 +98,7 @@ export default function Music() {
       }
 
       return (
+        <Restrainer>
         <div className={styles.musicPlayerContainer}>
             <Image className={styles.mainPhoto} src="/images/alice002.png"  width={340} height={370} />
             <audio ref={audioRef} onTimeUpdate={handleTimeUpdate} onEnded={handleNext}>
@@ -128,6 +130,7 @@ export default function Music() {
             
             </div>
         </div>
+        </Restrainer>
       )
 }
 
