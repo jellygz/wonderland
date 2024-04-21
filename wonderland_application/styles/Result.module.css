@@ -1,0 +1,55 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--white-bg); 
+    padding: 15px;
+    height: 100%;
+}
+
+.h1 {
+    font-family: var(--chapter-font);
+    font-size: medium;
+    font-weight: bold;
+    color: var(--mainblue)
+}
+
+.magician {
+    height: auto;
+    border: 2.5px solid var(--mainblue);
+    border-radius: 25px;
+    padding: 0px 20px;
+}
+
+.result {
+    font-family: var(--chapter-font);
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--main-blue);
+}
+
+.characteristicsContainer {
+    border: 1px solid var(--main-blue);
+    padding: 0px 26px;
+    background: var(--main-blue);
+    border-radius: 25px;
+}
+
+.characteristics {
+    font-family: "Josefin Sans";
+    color: var(--white-bg);
+    font-size: 15px;
+}
+
+.description {
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    text-align: left;
+    color: var(--main-blue);
+    border: 2.5px solid var(--main-blue);
+    padding: 25px;
+    border-radius: 25px;
+}
+
