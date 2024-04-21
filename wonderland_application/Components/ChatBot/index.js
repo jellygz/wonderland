@@ -5,8 +5,11 @@ import axios from "axios";
 export default function ChatBot () {
     const [input, setInput] = useState("");
     const [chatHistory, setChatHistory] = useState([]);
+    const [error, setError] = useState("");
+
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setError("Failed to send message. Please try again later.");
     setChatHistory((prevMessages) => [...prevMessages,{text:input,sender:"user"}])
     try {
         const response = await axios.post("/api/chatBotService",{message:input});
@@ -18,6 +21,7 @@ export default function ChatBot () {
     
     return (
         <div>
+            {error && <div className="error">{error}</div>}
             <div>
                 {
                     chatHistory.map((message,index) => (
