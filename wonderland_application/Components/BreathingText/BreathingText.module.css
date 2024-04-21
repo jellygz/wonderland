@@ -1,0 +1,32 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.breathingTextContainer {
+    text-align: center;
+}
+
+.breathingText {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    color: var(--white);
+    animation: fadeIn 2s forwards; /* Initial fade in */
+}
+
+.fadeOut {
+    animation: fadeOut 2s forwards; /* Fade out animation */
+}
