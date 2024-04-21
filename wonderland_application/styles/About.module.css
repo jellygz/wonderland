@@ -1,0 +1,84 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-bg);
+    height: 100%;
+}
+
+.h1 {
+    font-family: var(--chapter-font);
+    font-size: 19px;
+    color: var(--mainblue);
+}
+
+.line {
+    height: auto;
+}
+
+/* jillian */
+
+.jillian {
+    display: flex;
+    align-items: center;
+    border: 2.5px solid var(--mainblue);
+    border-radius: 25px;
+}
+
+.jillianText {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+}
+
+.jillianDesc {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+}
+
+.characteristicsContainer {
+    border: 1px solid var(--mainblue);
+    padding: 0px 26px;
+    background: var(--mainblue);
+    border-radius: 25px;
+}
+
+.characteristics {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: var(--white-bg);
+    font-size: 15px;
+}
+
+/* celine */
+
+.celine {
+    display: flex;
+    align-items: center;
+    border: 2.5px solid var(--mainblue);
+    border-radius: 25px;
+}
+
+.celineText {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+}
+
+.celineDesc {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+}
+
+.celinecharacteristicsContainer {
+    border: 1px solid var(--mainblue);
+    padding: 0px 26px;
+    background: var(--mainblue);
+    border-radius: 25px;
+}
+
+.celinecharacteristics {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: var(--white-bg);
+    font-size: 15px;
+}
