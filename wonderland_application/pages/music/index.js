@@ -2,22 +2,21 @@ import { useState,useEffect,useRef } from "react";
 import styles from "./Music.module.css"
 import Image from "next/image"
 import Restrainer from "@/components/Restrainer";
-
 export default function Music() {
     const allSongs = [
         {
           id: 0,
-          title: "happy_wonderland",
+          title: "trip_wonderland",
           artist: "wonderland",
           duration: "1:58",
-          src: "/music/happy_wonderland.mp3",
+          src: "/music/trip_wonderland.mp3",
         },
         {
           id: 1,
-          title: "Raindrops_wonderland",
+          title: "Wonderland_Adventure",
           artist: "wonderland",
-          duration: "2:00",
-          src: "/music/Raindrops_wonderland.mp3",
+          duration: "1:02",
+          src: "/music/Wonderland_Adventure.mp3",
         },
         {
           id: 2,
@@ -28,17 +27,17 @@ export default function Music() {
         },
         {
           id: 3,
-          title: "trip_wonderland",
+          title: "happy_wonderland",
           artist: "wonderland",
           duration: "1:58",
-          src: "/music/trip_wonderland.mp3",
+          src: "/music/happy_wonderland.mp3",
         },
         {
           id: 4,
-          title: "Wonderland_Adventure",
+          title: "Raindrops_wonderland",
           artist: "wonderland",
-          duration: "1:02",
-          src: "/music/Wonderland_Adventure.mp3",
+          duration: "2:00",
+          src: "/music/Raindrops_wonderland.mp3",
         },
         {
           id: 5,
