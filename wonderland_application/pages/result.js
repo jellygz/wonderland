@@ -18,7 +18,12 @@ export default function Home() {
         <RecordContextProvider>
           <main className={styles.main}>
             <h1 className={styles.h1}>Test Results</h1>
-              <Image className={styles.magician} src="/1347 1 (1).png" alt="Magician" width={300} height={400} />
+              <Image className={styles.magician} 
+                src="/1347 1 (1).png" 
+                alt="Magician" 
+                width={300} 
+                height={400} 
+                />
             <div className={styles.nameContainer}>
               <p className={styles.name}>Name! You are a...</p>
             </div>
