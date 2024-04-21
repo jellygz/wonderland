@@ -1,9 +1,14 @@
 .main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--black);
     height: 100%;
+}
+
+.spline {
+    height: auto;
 }
 
 .enterNameContainer {

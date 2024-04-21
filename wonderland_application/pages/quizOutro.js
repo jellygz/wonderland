@@ -3,8 +3,9 @@ import { RecordContextProvider } from '@/context/RecordContext'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Restrainer from '@/components/Restrainer'
-import Buttons from '@/components/Buttons'
 import styles from '@/styles/QuizOutro.module.css'
+import Image from "next/image"
+import BreathingText from '@/components/BreathingText'
 
 
 export default function quizOutro() {
@@ -16,13 +17,15 @@ export default function quizOutro() {
         router.push({pathname:"/result",query:{user: inputValue},})
     }
 
+
   return (
     <RecordContextProvider>
     <Restrainer>
     <main className={styles.main}>
-        {/* <div>Spline</div> */}
-        <div className={styles.enterNameContainer}>
-            <p classname={styles.enterNameText}>How was your walk? <br /> Do you remember who you are?</p>
+        <BreathingText />
+        <Image className={styles.spline} src="/spline_no_bg.gif" alt="Blob" width={650} height={400} />
+            <div className={styles.enterNameContainer}>
+            <p className={styles.enterNameText}>How was your walk? <br /> Do you remember who you are?</p>
             <input
                 classname={styles.inputBar}
                 onChange={(e) => setInputValue(e.target.value)} 
