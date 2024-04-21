@@ -1,7 +1,6 @@
 import { useState,useEffect,useRef } from "react";
 import styles from "./Music.module.css"
-import Image from "next/image";
-
+import Image from "next/image"
 
 export default function Music() {
     const allSongs = [
@@ -60,10 +59,15 @@ export default function Music() {
         }
       },[isPlaying])
       useEffect(() =>{
-        if (audioRef.current) {
-        audioRef.current.src = allSongs[currentSongIndex].src
-        setIsPlaying(true)}
-      }, [currentSongIndex,isPlaying])
+        //Reached to the end of playlist
+        //Reset currentSongIndex to beginning of the songs array
+        console.log(currentSongIndex, allSongs.length);
+        if(currentSongIndex > allSongs.length - 1) {setCurrentSongIndex(0)}
+        else if (audioRef.current) {
+          audioRef.current.src = allSongs[currentSongIndex].src
+        //setIsPlaying(true)
+        }
+      }, [currentSongIndex])
 
       const handlePlayPause = () => {
         setIsPlaying(!isPlaying)
@@ -73,10 +77,12 @@ export default function Music() {
       }
 
       const handleNext = () => {
+        setIsPlaying(false)
         setCurrentSongIndex((prevIndex) => (prevIndex + 1))
       }
 
       const handlePrevious = () => {
+        setIsPlaying(false)
         setCurrentSongIndex((prevIndex) => (prevIndex == 0?allSongs.length - 1:prevIndex - 1))
       }
 
@@ -91,39 +97,40 @@ export default function Music() {
       }
 
       return (
-        <div className={`${styles.container}`}>
-          <div className={`${styles.musicBoxContainer}`}>
+        <div className={styles.musicPlayerContainer}>
             <Image className={styles.mainPhoto} src="/images/alice002.png"  width={340} height={370} />
-         
-            <audio ref={audioRef} onTimeUpdate={handleTimeUpdate} onEnded={handleNext} controls={false} autoPlay={false}>
+            <audio ref={audioRef} onTimeUpdate={handleTimeUpdate} onEnded={handleNext}>
 
             </audio>
-            <div>
-                <button onClick={handlePrevious}>
-                    Previous
-                </button>
-                <button onClick={handlePlayPause}>
-                    {isPlaying?"pause": "play"}
-                </button>
-                <button onClick={handleNext}>
-                    Next
-                </button>
-            </div>
-            </div>
-            <div>
-            {audioRef.current && (
-        <div>
-          <input
-            type="range"
-            value={currentTime}
-            max={audioRef.current.duration}
-            onChange={handleSeek}
-          />
-        </div>
-      )}
+          <div className={styles.playerControls}>
+              <button className="previous-button" onClick={handlePrevious}>
+                  Previous
+              </button>
+              <button className={styles.playPauseButton} onClick={handlePlayPause}>
+                  {isPlaying ? 'Pause' : 'Play'}
+              </button>
+              <button className={styles.nextButton} onClick={handleNext}>
+                  Next
+              </button>
+          </div>
+
+            <div className={styles.rangeSliderContainer}>
+            
+              <div className={styles.songRangeControl}>
+              <input
+                type="range"
+               value={currentTime}
+               max={audioRef.current ? audioRef.current.duration : 0}
+               onChange={handleSeek}
+               className={styles.rangeSlider}
+/>
+              </div>
+            
             </div>
         </div>
       )
 }
+
+
 
 
