@@ -7,8 +7,7 @@ const BreathingText = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIsInhale((prevIsInhale) => !prevIsInhale);
-        }, 4000); // Change interval duration as needed (2s for each phase)
-
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
