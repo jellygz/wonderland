@@ -17,7 +17,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Restrainer>
-        <RecordContextProvider>
           <main className={styles.main}>
             <div className={styles.aliceContainer}>
               <Image className={styles.alice} src="/Alice.png" alt="Alice" width={450} height={400} />
@@ -38,7 +37,6 @@ export default function Home() {
               <Image className={styles.cardQueen} src="/queen 1.png" alt="Queen Card" width={70} height={70} />
             </div>
           </main>
-        </RecordContextProvider>
       </Restrainer>
     </>
   )

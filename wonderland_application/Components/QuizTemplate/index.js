@@ -54,7 +54,7 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 						}
 						<Buttons
 							buttonName="NEXT"
-							routerName={String(Number(router.query.id) + 1)}
+							routerName={router.query.id === "6" ? "/quizOutro" : String(Number(router.query.id) + 1)}
 						/>
 				</div>
 			</div>

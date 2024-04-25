@@ -147,7 +147,6 @@ export default function Quiz() {
     }
 
     return (
-        <RecordContextProvider>
         <div>
             {router.query.id &&
             <QuizTemplate
@@ -158,6 +157,5 @@ export default function Quiz() {
             />
         }
         </div>
-        </RecordContextProvider>
     );
 }

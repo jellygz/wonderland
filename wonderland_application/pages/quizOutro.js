@@ -6,20 +6,15 @@ import Restrainer from '@/components/Restrainer'
 import styles from '@/styles/QuizOutro.module.css'
 import Image from "next/image"
 import BreathingText from '@/components/BreathingText'
+import { useRecordContext } from "@/hooks/useRecordContext"
+import Buttons from '@/components/Buttons'
 
 
 export default function quizOutro() {
 
     const router = useRouter()
-    const [ inputValue, setInputValue ] = useState("")
-
-    const handleClick = () => {
-        router.push({pathname:"/result",query:{user: inputValue},})
-    }
-
 
   return (
-    <RecordContextProvider>
     <Restrainer>
     <main className={styles.main}>
         <BreathingText />
@@ -32,16 +27,13 @@ export default function quizOutro() {
                 placeholder='Enter your name...' 
             />
         <div className={styles.buttonContainer}>
-            <button 
-            className={styles.quizOutroButton}
-            onClick={handleClick}
-            >
-                Enter
-            </button>
+            <Buttons 
+                buttonName="ENTER"
+                isResult
+            />
         </div>
     </div>
     </main>
     </Restrainer>
-    </RecordContextProvider>
   )
 }

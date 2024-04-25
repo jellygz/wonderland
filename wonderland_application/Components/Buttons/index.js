@@ -2,7 +2,7 @@ import style from './Buttons.module.css';
 import { useRouter } from 'next/navigation';
 import { useRecordContext } from '@/hooks/useRecordContext';
 
-export default function Buttons({buttonName, routerName, isBack}) {
+export default function Buttons({buttonName, routerName, isBack, isResult}) {
     const router = useRouter()
     const {setActiveOption, setSelectedOptions, activeOption, selectedOptions} = useRecordContext()
 
@@ -19,6 +19,27 @@ export default function Buttons({buttonName, routerName, isBack}) {
         router.push({pathname: routerName})
     }
 
+    // const [ inputValue, setInputValue ] = useState("")
+
+    const countA = selectedOptions.filter(option => option === "A").length
+	const countB = selectedOptions.filter(option => option === "B").length
+
+    console.log(countA, countB)
+
+    const handleClickResult = () => {
+        if (countA > countB) {
+            router.push({pathname:"/result/magician"})
+        } else if (countA < countB) {
+            router.push({pathname:"/result/pirate"})
+        } else if (countA === countB) {
+            router.push({pathname:"/result/archer"})
+        } else if (countB === 6) {
+            router.push({pathname:"/result/warrior"})
+        } else {
+            router.push({pathname:"/result/magician"})
+        }
+    }
+
     return(
     <div className={isBack ? style.quizBackButton : style.quizButton}>
         {isBack ? (
@@ -26,6 +47,9 @@ export default function Buttons({buttonName, routerName, isBack}) {
         ) : activeOption ? (
             <button onClick={()=>handleClickNext(activeOption)}>{buttonName}</button>
         ) : null}
+        {isResult &&
+            <button onClick={()=>handleClickResult()}>{buttonName}</button>
+        }
     </div>
     );
 }

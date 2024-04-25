@@ -19,7 +19,7 @@ export default function QuizIntro() {
                 <Image className={styles.spline} src="/spline_no_bg.gif" alt="Blob" width={650} height={400} />
                     <div>
                         <p className={styles.desc}>
-                        Your memory has been erased <br />
+                        <span className={styles.memoryText}>Your memory has been erased</span>
                         Take your time to relax <br />
                         We will soon begin to embark on a <br />
                         journey exploring your deepest thoughts

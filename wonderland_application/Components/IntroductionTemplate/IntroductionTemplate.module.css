@@ -25,6 +25,7 @@
 .borderContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .descriptionImage {
@@ -52,3 +53,6 @@
     font-family: "Josefin Sans";
 }
 
+.arrowIcon {
+    color: var(--white);
+}

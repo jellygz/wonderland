@@ -18,3 +18,8 @@
     color: var(--white);
     text-align: center;
 }
+
+.memoryText {
+    display: block;
+    padding-bottom: 7px;
+}
