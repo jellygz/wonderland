@@ -4,18 +4,28 @@ import { useRecordContext } from '@/hooks/useRecordContext';
 
 export default function Buttons({buttonName, routerName, isBack}) {
     const router = useRouter()
-    const {ctA, ctB, setActiveOption} = useRecordContext()
-    const rdA = ctA;
-    const rdB = ctB;
+    const {setActiveOption, setSelectedOptions, activeOption, selectedOptions} = useRecordContext()
 
-    const handleClick = () => {
-        router.push({pathname:routerName,query:{rdA, rdB},})
+    const handleClickNext = (option) => {
+        setSelectedOptions([...selectedOptions, option])
+        router.push({pathname: routerName})
         setActiveOption(null)
+    }
+
+    const handleClickBack = () => {
+        const updatedOptions = [...selectedOptions]
+        updatedOptions.pop()
+        setSelectedOptions(updatedOptions)
+        router.push({pathname: routerName})
     }
 
     return(
     <div className={isBack ? style.quizBackButton : style.quizButton}>
-    <button onClick={()=>handleClick()}>{buttonName}</button>
+        {isBack ? (
+            <button onClick={()=>handleClickBack()}>{buttonName}</button>
+        ) : activeOption ? (
+            <button onClick={()=>handleClickNext(activeOption)}>{buttonName}</button>
+        ) : null}
     </div>
     );
 }

@@ -1,6 +1,5 @@
 "use client"
             
-import { useState } from "react";
 import { useRecordContext } from "@/hooks/useRecordContext";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -13,11 +12,14 @@ import QuizButton from "../QuizButton";
 
 
 export default function QuizTemplate({ chapterNumber, question, imageSrc, options }) {
-	// const [ctA,setCountA] = useState(countA);
-	// const [ctB,setCountB] = useState(countB);
 
-	const {handleClickCountA, handleClickCountB, ctA, ctB, activeOption} = useRecordContext()
+	const {activeOption, selectedOptions, setActiveOption} = useRecordContext()
 	const router = useRouter()
+
+	const countA = selectedOptions.filter(option => option === "A").length
+	const countB = selectedOptions.filter(option => option === "B").length
+
+	console.log("countA:", countA, "countB:", countB)
 
 	return (
 		<Restrainer>
@@ -34,14 +36,12 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 				/>
 				<QuizButton 
 					text={options[0].textA}
-					onClick={() => handleClickCountA("A")}
-					id={"A"}
+					onClick={() => setActiveOption("A")}
 					isActive={activeOption === "A"}
 				/>
 				<QuizButton 
 					text={options[1].textB}
-					onClick={() => handleClickCountB("B")}
-					id={"B"}
+					onClick={() => setActiveOption("B")}
 					isActive={activeOption === "B"}
 				/>
 				<div className={style.buttonContainer}>
@@ -49,16 +49,12 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 						<Buttons 
 							buttonName="BACK"
 							routerName={String(Number(router.query.id) - 1)}
-							recordA={ctA}
-							recordB={ctB}
 							isBack
 						/>
 						}
 						<Buttons
 							buttonName="NEXT"
 							routerName={String(Number(router.query.id) + 1)}
-							recordA={ctA}
-							recordB={ctB}
 						/>
 				</div>
 			</div>

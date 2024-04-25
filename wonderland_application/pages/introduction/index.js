@@ -24,22 +24,15 @@ export default function Home() {
             <Image className={styles.border} src="/image 25.png" alt="Logo" width={400} height={200} />
           </div>
           <div className={styles.descriptionImageContainer}>
-            <Image className={styles.descriptionImage} src="/mental-health 1.png" alt="brain-vector" width={75} height={200} />
+            <Image className={styles.descriptionImage} src="/mental-health 1.png" alt="brain-vector" width={80} height={200} />
           </div>
           <div className={styles.descriptionTextContainer}>
-            <p className={styles.descriptionText}>Wonderland is an innovative app <br />
-                crafted to dive into users’ mental <br />
-                well-being in an interactive and <br />
-                engaging manner. Drawing inspiration <br />
-                from ‘Alice in Wonderland,’ this app <br />
-                seeks to evaluate users’ burnout <br />
-                levels through an immersive and <br />
-                playful quiz. By incorporating elements <br />
-                from the beloved story line of Alice, <br />
-                our aim is to take our users into <br />
-                a similar journey where they can learn <br />
-                more about themselves and <br />
-                reflect upon their mental health.</p>
+            <p className={styles.descriptionText}>
+              Wonderland is an app inspired by <br />
+              "Alice in Wonderland" that assesses <br />
+              personality types with an immersive <br />
+              quiz, promoting self-discovery and <br />
+              mental health reflection.</p>
           </div>
           
         </main>
