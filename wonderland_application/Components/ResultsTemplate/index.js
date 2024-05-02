@@ -1,29 +1,65 @@
 import Image from "next/image";
 import styles from "./ResultsTemplate.module.css"
 import Restrainer from "@/components/Restrainer";
+import React from 'react';
+import { Radar } from 'react-chartjs-2';
+import 'chart.js/auto'; 
 
+export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData}) {
+  const data = {
+    labels: ['Innovation', 'Independent', 'Detail-Oriented', 'Action-Oriented', 'Resilience', 'Extrovert'],
+    datasets: [
+      {
+        label: 'Your Personality Traits',
+        data: radarData || [20, 30, 40, 50, 60, 70], 
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+        fill: true
+      }
+    ]
+  };
 
-export default function ResultsTemplate({title, mainImageSrc, characteristics, description}) {
+  const options = {
+    scales: {
+      r: {
+        angleLines: {
+          display: false
+        },
+        suggestedMin: 0,
+        suggestedMax: 100
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+    }
+  };
+
   return (
     <>
       <Restrainer>
           <main className={styles.main}>
             <h1 className={styles.h1}>Test Results</h1>
-              <Image className={styles.magician} 
+            <Image 
                 src={mainImageSrc}
                 alt={title}
                 width={300} 
                 height={400} 
-                />
+                className={styles.magician} 
+            />
             <div className={styles.nameContainer}>
               <p className={styles.name}>Name! You are a...</p>
             </div>
-              <h1 className={styles.result}>{title}</h1>
+            <div className={styles.radarChart}>
+              <Radar data={data} options={options} />
+            </div>
+            <h1 className={styles.result}>{title}</h1>
             <div className={styles.characteristicsContainer}>
-            <p className={styles.characteristics}>{characteristics}</p>
+              <p className={styles.characteristics}>{characteristics}</p>
             </div>
             <div className={styles.description}>{description}</div>
-            
           </main>
       </Restrainer>
     </>
