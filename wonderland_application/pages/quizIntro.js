@@ -1,18 +1,14 @@
-import { useEffect } from 'react';
-import Buttons from '@/components/Buttons';
 import Image from 'next/image';
-import { RecordContextProvider } from '@/context/RecordContext';
 import Restrainer from '@/components/Restrainer';
 import styles from "@/styles/QuizIntro.module.css";
 import BreathingText from '@/components/BreathingText';
-
+import Link from "next/link"
 
 export default function QuizIntro() {
     
 
     return (
         <>
-        <RecordContextProvider>
         <Restrainer>
             <main className={styles.main}>
                 <BreathingText />
@@ -25,15 +21,11 @@ export default function QuizIntro() {
                         journey exploring your deepest thoughts
                         </p>
                     </div>
-                    <Buttons 
-                    buttonName="Start"
-                    routerName="/quiz/1"
-                    recordA={0}
-                    recordB={0}
-                    />
+                    <div className={styles.quizButton}>
+                        <Link href="/quiz/1" className={styles.button}>Start</Link>
+                    </div>
             </main>
         </Restrainer>
-        </RecordContextProvider>
         </>
     );
 }

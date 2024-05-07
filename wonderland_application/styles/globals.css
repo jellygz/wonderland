@@ -19,3 +19,28 @@
   --dark-blue: #041732;
   --chapter-font: "Cardo";
 }
+
+p {
+  font-family: "Josefin Sans";
+  font-size: 13.5px;
+} 
+
+.subtitle {
+  font-family: "Cardo";
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.hidden {
+  animation: overlayClose ease-in-out 0.5s;
+}
+
+@keyframes overlayClose {
+  from {
+      transform: translateX(0%);
+  } 
+  to {
+      transform: translateX(100%);
+  }
+}
+

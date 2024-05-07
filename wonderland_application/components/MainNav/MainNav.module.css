@@ -1,0 +1,78 @@
+.backButton {
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.logo {
+    height: auto;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    width: var(--screenWidth);
+    height: 100%;
+    background-color: #041732;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: overlay ease-in-out 0.5s;
+}
+
+@keyframes overlay {
+    from {
+        transform: translateX(100%);
+    } 
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.overlayClose {
+    transform: translateX(100%);
+    display: block;
+    position: absolute;
+    width: var(--screenWidth);
+    height: 100%;
+    background-color: #041732;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 95px 0;
+    padding: 0;
+}
+
+.link {
+    margin: 25px 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: "Josefin Sans";
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.about {
+    text-align: center;
+}

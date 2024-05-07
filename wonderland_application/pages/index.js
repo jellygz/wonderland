@@ -30,7 +30,7 @@ export default function Home() {
                 <div className={styles.circleButton}>
                   <Image className={styles.button} src="/image 1.png" alt="Button" width={120} height={120} />
                 </div>
-                <Link href="/introduction" className={styles.arrowButton}>
+                <Link href="/introduction/1" className={styles.arrowButton}>
                 <Image className={styles.arrow} src="/button.png" alt="Button" width={50} height={50} />
                 </Link>
               </div>

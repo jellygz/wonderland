@@ -23,3 +23,28 @@
     display: block;
     padding-bottom: 7px;
 }
+
+.quizButton {
+    margin: 30px 4px; 
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #3C5880;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 98px; 
+    height: 38px; 
+    font-size: 15px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #3C5880;
+}
