@@ -1,18 +1,22 @@
 import style from './Buttons.module.css';
 import { useRouter } from 'next/navigation';
 import { useRecordContext } from '@/hooks/useRecordContext';
+import { useState } from 'react';
 
 export default function Buttons({buttonName, routerName, isBack, isResult}) {
     const router = useRouter()
     const {setActiveOption, setSelectedOptions, activeOption, selectedOptions} = useRecordContext()
+    const [clickSound] = useState(new Audio("/music/tap_1.mp3"))
 
     const handleClickNext = (option) => {
+        clickSound.play();
         setSelectedOptions([...selectedOptions, option])
         router.push({pathname: routerName})
         setActiveOption(null)
     }
 
     const handleClickBack = () => {
+        clickSound.play();
         const updatedOptions = [...selectedOptions]
         updatedOptions.pop()
         setSelectedOptions(updatedOptions)
@@ -27,6 +31,7 @@ export default function Buttons({buttonName, routerName, isBack, isResult}) {
     console.log(countA, countB)
 
     const handleClickResult = () => {
+        clickSound.play();
         if (countA > countB) {
             router.push({pathname:"/result/magician"})
         } else if (countA < countB) {

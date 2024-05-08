@@ -79,6 +79,19 @@
     display: block;
 }
 
+.imageContainer {
+    animation: floatAnimation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform:translateY(-10px);
+    }
+}
+
 
 
 
@@ -105,3 +118,4 @@
         margin-top: 10px; 
     }
 }
+

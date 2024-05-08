@@ -9,6 +9,7 @@ import style from "./QuizTemplate.module.css";
 import Buttons from "@/components/Buttons";
 import Restrainer from "../Restrainer";
 import QuizButton from "../QuizButton";
+import SwitchButton from "../SwitchButton";
 
 
 export default function QuizTemplate({ chapterNumber, question, imageSrc, options }) {
@@ -28,12 +29,14 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 				<div className={style.question}>
 						<div>{question}</div>
 				</div>
+				<div className={style.imageContainer}>
 				<Image 
 					src={imageSrc} 
 					alt="Question Image" 
 					width={250} 
 					height={250}
 				/>
+				</div>
 				<QuizButton 
 					text={options[0].textA}
 					onClick={() => setActiveOption("A")}
@@ -57,6 +60,7 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 							routerName={router.query.id === "6" ? "/quizOutro" : String(Number(router.query.id) + 1)}
 						/>
 				</div>
+				<SwitchButton />
 			</div>
 		</Restrainer>
 	);
