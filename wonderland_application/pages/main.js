@@ -30,22 +30,22 @@ export default function Main() {
                         <h2 className="subtitle">Explore your home</h2>
                         <div>
                             <Link className={styles.button} href="/quizIntro">
-                                GO FOR A WALK
+                                PERSONALITY QUIZ
                                 <hr className={styles.line} />
-                                <Image className={styles.buttonImage} src="/landscape 1.png" alt="Mountains" width={70} height={70} />
+                                <Image className={styles.buttonImage} src="/landscape 1.png" alt="Mountains" width={50} height={50} />
                             </Link>
                             <Link className={styles.button} href="/chatbot">
-                                <Image className={styles.buttonImage} src="/speech-bubble 1.png" alt="Speech Bubble" width={70} height={70} />
+                                <Image className={styles.buttonImage} src="/speech-bubble 1.png" alt="Speech Bubble" width={50} height={50} />
                                 <hr className={styles.line} />
                                 TALK TO ALICE
                             </Link>
                             <Link className={styles.button} href="/music">
                                 LISTEN TO MUSIC
                                 <hr className={styles.line} />
-                                <Image className={styles.buttonImage} src="/musical-notes 1.png" alt="Musical Notes" width={70} height={70} />
+                                <Image className={styles.buttonImage} src="/musical-notes 1.png" alt="Musical Notes" width={50} height={50} />
                             </Link>
                             <Link className={styles.button} href="/quizIntro">
-                                <Image className={styles.buttonImage} src="/star 1.png" alt="Stars" width={70} height={70} />
+                                <Image className={styles.buttonImage} src="/star 1.png" alt="Stars" width={50} height={50} />
                                 <hr className={styles.line} />
                                 MAKE A WISH
                             </Link>

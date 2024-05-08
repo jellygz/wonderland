@@ -1,9 +1,15 @@
 .main {
+    background-color: var(--white-bg);
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--white-bg);
     height: 100%;
 }
 
@@ -24,6 +30,7 @@
     align-items: center;
     border: 2.5px solid var(--mainblue);
     border-radius: 25px;
+    padding: 40px;
 }
 
 .jillianText {
@@ -41,6 +48,7 @@
     padding: 0px 26px;
     background: var(--mainblue);
     border-radius: 25px;
+    margin: 20px;
 }
 
 .characteristics {
@@ -50,6 +58,10 @@
     font-size: 15px;
 }
 
+.cat {
+    height: auto;
+}
+
 /* celine */
 
 .celine {
@@ -57,6 +69,8 @@
     align-items: center;
     border: 2.5px solid var(--mainblue);
     border-radius: 25px;
+    padding: 40px 50px;
+    margin-top: 20px;
 }
 
 .celineText {
@@ -74,6 +88,7 @@
     padding: 0px 26px;
     background: var(--mainblue);
     border-radius: 25px;
+    margin: 20px;
 }
 
 .celinecharacteristics {
@@ -81,4 +96,8 @@
     font-weight: 300;
     color: var(--white-bg);
     font-size: 15px;
+}
+
+.dog {
+    height: auto;
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import Link from "next/link";
 import Restrainer from "@/components/Restrainer";
-import { RecordContextProvider } from "@/context/RecordContext";
+import MainNav from '@/components/MainNav'
 
 
 export default function Home() {
@@ -17,29 +17,32 @@ export default function Home() {
       </Head>
       <Restrainer>
           <main className={styles.main}>
-            <h1 className={styles.h1}>OUR TEAM</h1>
-            <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
-            <div className={styles.jillian}>
-                <Image className={styles.cat} src="/506.png" alt="Cat Drawing" width={225} height={220} />
-                <div className={styles.jillianDescContainer}>
-                    <h1 className={styles.jillianText}>Jillian G.</h1>
-                    <p className={styles.jillianDesc}>ux/ui designer</p>
-                </div>
+            <MainNav />
+            <div className={styles.container}>
+              <h1 className={styles.h1}>OUR TEAM</h1>
+              <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
+              <div className={styles.jillian}>
+                  <Image className={styles.cat} src="/506.png" alt="Cat Drawing" width={130} height={220} />
+                  <div className={styles.jillianDescContainer}>
+                      <h1 className={styles.jillianText}>Jillian G.</h1>
+                      <p className={styles.jillianDesc}>ux/ui designer</p>
+                  </div>
+              </div>
+              <div className={styles.characteristicsContainer}>
+              <p className={styles.characteristics}>#detail-oriented #creative #adaptable</p>
+              </div>
+              <div className={styles.celine}>
+                  <div className={styles.celineDescContainer}>
+                      <h1 className={styles.celineText}>Celine W.</h1>
+                      <p className={styles.celineDesc}>ux/ui designer</p>
+                  </div>
+                  <Image className={styles.dog} src="/942.png" alt="Dog Drawing" width={95} height={300} />
+              </div>
+              <div className={styles.celinecharacteristicsContainer}>
+              <p className={styles.celinecharacteristics}>#artistic #eager-to-learn #team-player</p>
+              </div>
+              <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
             </div>
-            <div className={styles.characteristicsContainer}>
-            <p className={styles.characteristics}>#detail-oriented #creative #adaptable</p>
-            </div>
-            <div className={styles.celine}>
-                <div className={styles.celineDescContainer}>
-                    <h1 className={styles.celineText}>Jillian G.</h1>
-                    <p className={styles.celineDesc}>ux/ui designer</p>
-                </div>
-                <Image className={styles.dog} src="/942.png" alt="Dog Drawing" width={300} height={300} />
-            </div>
-            <div className={styles.celinecharacteristicsContainer}>
-            <p className={styles.celinecharacteristics}>#artistic #eager-to-learn #team-player</p>
-            </div>
-            <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
           </main>
       </Restrainer>
     </>
