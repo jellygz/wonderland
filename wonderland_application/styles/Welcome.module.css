@@ -1,0 +1,72 @@
+.main {
+    background-color: var(--black);
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.aliceContainer {
+    margin-top: 70px;
+}
+
+.alice {
+    height: auto;
+}
+
+.textContainer {
+    margin: 10px 0;
+}
+
+.welcomeText {
+    font-family: "Cardo";
+    font-weight: bold;
+    font-size: larger;
+}
+
+.spanText {
+    display: block;
+    padding: 10px 0;
+}
+
+.descriptionText {
+    font-size: 14px;
+}
+
+.buttonsContainer {
+    display: block;
+}
+
+.quizButton {
+    margin: 30px 4px; 
+    text-align: center;
+}
+
+.buttonWhite {
+    padding: 15px 70px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 98px;
+    height: 38px;
+    font-size: 15px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #3C5880;
+}
