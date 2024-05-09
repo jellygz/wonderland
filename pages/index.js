@@ -22,7 +22,7 @@ export default function Index() {
               <Image className={styles.alice} src="/Alice.png" alt="Alice" width={450} height={400} />
             </div>
             <div className={styles.wonderlandLogoContainer}>
-              <Image className={styles.wonderlandLogo} src="/Wonderland logo.png" alt="Logo" width={300} height={200} />
+              <Image className={styles.wonderlandLogo} src="/Wonderland Logo.png" alt="Logo" width={300} height={200} />
             </div>
             <div className={styles.buttonsContainer}>
               <Image className={styles.cardKing} src="/king 1.png" alt="King Card" width={70} height={70} />
