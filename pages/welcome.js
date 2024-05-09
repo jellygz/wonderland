@@ -4,6 +4,7 @@ import styles from '@/styles/Welcome.module.css'
 import MainNav from '@/components/MainNav'
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Welcome() {
 
@@ -30,7 +31,14 @@ export default function Welcome() {
                     <div className={styles.buttonsContainer}>
                         <div className={styles.quizButton}>
                             <Link href="/quizIntro" className={styles.buttonWhite}>
-                                Join Alice...
+                                <p>Join Alice...</p>
+                                <FaArrowRight />
+                            </Link>
+                        </div>
+                        <div className={styles.quizButton}>
+                            <Link href="/quizIntro" className={styles.buttonBlack}>
+                                <p>Go alone...</p>
+                                <FaArrowRight className={styles.arrowWhite}/>
                             </Link>
                         </div>
                     </div>

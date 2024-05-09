@@ -84,3 +84,69 @@
 .about {
     text-align: center;
 }
+
+.exitOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exitContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.exitCat {
+    height: auto;
+}
+
+.exitText {
+    color: var(--main-blue);
+    font-size: large;
+    font-weight: bold;
+}
+
+.exitButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.exitYes {
+    display: block;
+    background-color: var(--mainblue);
+    border: 1px solid var(--mainblue);
+    color: white;
+    padding: 10px;
+    width: 110px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-weight: bold;
+}
+
+.exitNo {
+    display: block;
+    background-color: var(--white);
+    border: 2px solid var(--mainblue);
+    color: var(--main-blue);
+    padding: 10px;
+    width: 110px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-weight: bold;
+}

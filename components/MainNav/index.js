@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import Image from 'next/image'
 import styles from './MainNav.module.css'
@@ -6,8 +7,10 @@ import { useState } from 'react';
 
 export default function MainNav() {
   
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [closeEvent, setCloseEvent] = useState("")
+  const [isExitOpen, setIsExitOpen] = useState(false)
 
   const handleOpen = () => {
     setIsOpen(true)
@@ -18,9 +21,28 @@ export default function MainNav() {
     setCloseEvent("hidden")
   }
 
-  console.log(isOpen)
+  const handleExitOpen = () => {
+    setIsExitOpen(true)
+  }
+
+  const handleExitClose = () => {
+    setIsExitOpen(false)
+  }
 
   return (
+    <>
+    { isExitOpen &&
+        <div className={styles.exitOverlay}>
+        <div className={styles.exitContainer}>
+          <Image className={styles.exitCat} src="/cat.png" alt="cat" width={150} height={150} />
+          <p className={styles.exitText}>Are you sure you want to exit?</p>
+          <div className={styles.exitButtons}>
+            <button onClick={handleExitClose} className={styles.exitNo}>NO</button>
+            <button onClick={() => router.push("/main")} className={styles.exitYes}>YES</button>
+          </div>
+        </div>
+      </div>
+    }
     <div className={styles.container}>
         <nav className={isOpen ? styles.overlay : `${styles.overlayClose} ${closeEvent}`}>
         <Image onClick={handleClose} className={styles.backButton} src="/Group 1.png" alt="Back Button" width={35} height={35} />
@@ -38,10 +60,11 @@ export default function MainNav() {
           <p className={styles.about}>&copy; Jillian, Celine</p>
       </nav>
         <div className={styles.icons}>
-          <Image src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
+          <Image onClick={handleExitOpen} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
           <Image className={styles.logo} src="/Wonderland.png" alt="Logo" width={150} height={55} />
           <Image className={styles.hamburger} onClick={handleOpen} src="/Hamburger Menu Icon.svg" alt="Hamburger Menu" width={35} height={35} />
         </div>
     </div>
+    </>
   )
 }
