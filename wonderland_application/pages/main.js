@@ -29,7 +29,7 @@ export default function Main() {
                     <div className={styles.bottom}>
                         <h2 className="subtitle">Explore your home</h2>
                         <div>
-                            <Link className={styles.button} href="/quizIntro">
+                            <Link className={styles.button} href="/welcome">
                                 PERSONALITY QUIZ
                                 <hr className={styles.line} />
                                 <Image className={styles.buttonImage} src="/landscape 1.png" alt="Mountains" width={50} height={50} />

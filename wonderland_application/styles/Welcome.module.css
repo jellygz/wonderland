@@ -23,10 +23,6 @@
     height: auto;
 }
 
-.textContainer {
-    margin: 10px 0;
-}
-
 .welcomeText {
     font-family: "Cardo";
     font-weight: bold;
@@ -52,7 +48,10 @@
 }
 
 .buttonWhite {
-    padding: 15px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 60px;
     background-color: var(--white);
     color: var(--black);
     border-radius: 10px;

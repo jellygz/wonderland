@@ -1,0 +1,33 @@
+.main {
+    background-color: var(--white-bg);
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.h1 {
+    font-family: var(--chapter-font);
+    font-size: 19px;
+    color: var(--mainblue);
+}
+
+.line {
+    height: auto;
+}
+
+.topContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}

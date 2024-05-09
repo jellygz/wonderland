@@ -5,7 +5,7 @@ import MainNav from '@/components/MainNav'
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Main() {
+export default function Welcome() {
 
   return (
     <>
@@ -14,7 +14,7 @@ export default function Main() {
                 <MainNav />
                 <div className={styles.container}>
                     <div className={styles.aliceContainer}>
-                        <Image className={styles.alice} src="/Group 27.png" alt="Alice" width={410} height={70} />
+                        <Image className={styles.alice} src="/Group 27.png" alt="Alice" width={385} height={70} />
                     </div>
                     <div className={styles.textContainer}>
                         <h1 className={styles.welcomeText}>Welcome to Wonderland!</h1>
@@ -29,7 +29,9 @@ export default function Main() {
                     </div>
                     <div className={styles.buttonsContainer}>
                         <div className={styles.quizButton}>
-                            <Link href="/quizIntro" className={styles.buttonWhite}>Join Alice...</Link>
+                            <Link href="/quizIntro" className={styles.buttonWhite}>
+                                Join Alice...
+                            </Link>
                         </div>
                     </div>
                 </div>

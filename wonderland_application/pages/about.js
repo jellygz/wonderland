@@ -6,7 +6,7 @@ import Restrainer from "@/components/Restrainer";
 import MainNav from '@/components/MainNav'
 
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
@@ -19,8 +19,10 @@ export default function Home() {
           <main className={styles.main}>
             <MainNav />
             <div className={styles.container}>
-              <h1 className={styles.h1}>OUR TEAM</h1>
-              <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
+              <div className={styles.topContainer}>
+                <h1 className={styles.h1}>OUR TEAM</h1>
+                <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
+              </div>
               <div className={styles.jillian}>
                   <Image className={styles.cat} src="/506.png" alt="Cat Drawing" width={130} height={220} />
                   <div className={styles.jillianDescContainer}>
@@ -41,7 +43,7 @@ export default function Home() {
               <div className={styles.celinecharacteristicsContainer}>
               <p className={styles.celinecharacteristics}>#artistic #eager-to-learn #team-player</p>
               </div>
-              <Image className={styles.line} src="/image 4.png" alt="Line" width={350} height={400} />
+              <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
             </div>
           </main>
       </Restrainer>

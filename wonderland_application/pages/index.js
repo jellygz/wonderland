@@ -7,7 +7,7 @@ import MainNav from "@/components/MainNav";
 import { RecordContextProvider } from "@/context/RecordContext";
 
 
-export default function Home() {
+export default function Index() {
   return (
     <>
       <Head>
