@@ -10,10 +10,7 @@ import Buttons from "@/components/Buttons";
 import Restrainer from "../Restrainer";
 import QuizButton from "../QuizButton";
 import SwitchButton from "../SwitchButton";
-import HomeIconImage from "@/public/images/Rabbit Icon (1).png";
-import LogoImage from "@/public/images/Wonderland.png";
-import HambugerMenuImage from "@/public/images/Hamburger Menu Icon (1).png";
-import Link from "next/link";
+import MainNav from "../MainNav";
 
 
 export default function QuizTemplate({ chapterNumber, question, imageSrc, options }) {
@@ -28,28 +25,9 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 
 	return (
 		<Restrainer>
+			<main className={style.main}>
+			<MainNav isQuizPage />
 			<div className={style.container}>
-				<div className={style.navBar}>
-				<Link href="/main">
-					<Image 
-					src={HomeIconImage}
-					alt="Home Icon Image"
-					width={30}
-					height={30}></Image>
-					</Link>
-				<Link href="/main">
-					<Image
-					src={LogoImage}
-					alt="Logo Image"
-					width={160}
-					height={56}></Image>
-				</Link>
-					<Image
-					src={HambugerMenuImage}
-					alt="Hambuger menu Image"
-					width={27}
-					height={23}></Image>
-				</div>
 				<h1 className={style.h1}>CHAPTER {chapterNumber}</h1>
 				<div className={style.question}>
 						<div>{question}</div>
@@ -87,6 +65,7 @@ export default function QuizTemplate({ chapterNumber, question, imageSrc, option
 				</div>
 				<SwitchButton />
 			</div>
+			</main>
 		</Restrainer>
 	);
 }

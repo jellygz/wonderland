@@ -1,3 +1,12 @@
+.main {
+    background: var(--white-bg); 
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
 .h1 {
     font-family: var(--chapter-font);
     font-size: medium;
@@ -10,22 +19,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
     text-align: center;
-    background: var(--white-bg); 
-    padding: 15px;
-    box-sizing: border-box;
-    /* jillian added */
     height: 100%;
-}
-
-.navBar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
 }
 
 .header {

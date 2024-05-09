@@ -5,7 +5,7 @@ import styles from './MainNav.module.css'
 import Link from "next/link";
 import { useState } from 'react';
 
-export default function MainNav() {
+export default function MainNav({isQuizPage}) {
   
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
@@ -60,7 +60,9 @@ export default function MainNav() {
           <p className={styles.about}>&copy; Jillian, Celine</p>
       </nav>
         <div className={styles.icons}>
-          <Image onClick={handleExitOpen} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
+          {isQuizPage ? <Image onClick={handleExitOpen} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} /> :
+            <Image onClick={() => router.push("/main")} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
+          }
           <Image className={styles.logo} src="/Wonderland.png" alt="Logo" width={150} height={55} />
           <Image className={styles.hamburger} onClick={handleOpen} src="/Hamburger Menu Icon.svg" alt="Hamburger Menu" width={35} height={35} />
         </div>

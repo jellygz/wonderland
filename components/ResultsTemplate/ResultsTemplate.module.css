@@ -1,11 +1,17 @@
 .main {
+    background: var(--white-bg); 
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: var(--white-bg); 
-    padding: 15px;
     height: 100%;
 }
 

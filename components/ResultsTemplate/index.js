@@ -4,6 +4,7 @@ import Restrainer from "@/components/Restrainer";
 import React from 'react';
 import { Radar } from 'react-chartjs-2';
 import 'chart.js/auto'; 
+import MainNav from "../MainNav";
 
 export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData, userName}) {
   const data = {
@@ -27,7 +28,10 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
           display: false
         },
         suggestedMin: 0,
-        suggestedMax: 100
+        suggestedMax: 100,
+        ticks: {
+          display: false
+        }
       }
     },
     plugins: {
@@ -41,6 +45,8 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
     <>
       <Restrainer>
           <main className={styles.main}>
+          <MainNav />
+          <div className={styles.container}>
             <h1 className={styles.h1}>Test Results</h1>
             <Image 
                 src={mainImageSrc}
@@ -60,6 +66,7 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
               <p className={styles.characteristics}>{characteristics}</p>
             </div>
             <div className={styles.description}>{description}</div>
+            </div>
           </main>
       </Restrainer>
     </>

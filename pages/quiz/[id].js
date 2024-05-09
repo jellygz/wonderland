@@ -147,7 +147,7 @@ export default function Quiz() {
     }
 
     return (
-        <div>
+        <>
             {router.query.id &&
             <QuizTemplate
                 chapterNumber={router.query.id}
@@ -156,6 +156,6 @@ export default function Quiz() {
                 options={optionsValue(router.query.id)}
             />
         }
-        </div>
+        </>
     );
 }
