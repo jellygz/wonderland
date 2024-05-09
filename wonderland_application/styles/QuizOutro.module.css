@@ -30,6 +30,7 @@
     border-radius: 8px;
     background-color: var(--black);
     margin-top: 20px;
+    color: var(--white);
 }
 
 .buttonContainer {

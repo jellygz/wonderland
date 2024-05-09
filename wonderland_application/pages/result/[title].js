@@ -6,11 +6,16 @@ import mainMagician from "@/public/1347 1 (1).png";
 import mainPirate from "@/public/818.png";
 import mainArcher from "@/public/1337.png";
 import mainWarrior from "@/public/1160.png";
+import { useSearchParams } from 'next/navigation'
 
 
 export default function Result() {
   const router = useRouter();
-
+  const { userName } = router.query;
+  
+  // const searchParams = useSearchParams();
+  // const userName = searchParams.get("userName");
+  console.log(userName);
   const radarChartData = {
     magician: [80, 70, 90, 60, 85, 75],
     pirate: [65, 75, 70, 95, 60, 80],
@@ -69,6 +74,7 @@ export default function Result() {
           characteristics={characteristicsValue(router.query.title)}
           description={descriptionValue(router.query.title)}
           radarData={radarChartData[router.query.title.toLowerCase()]}
+          userName={userName}
         />
       }
     </>

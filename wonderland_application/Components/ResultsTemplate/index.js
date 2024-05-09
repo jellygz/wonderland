@@ -5,7 +5,7 @@ import React from 'react';
 import { Radar } from 'react-chartjs-2';
 import 'chart.js/auto'; 
 
-export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData}) {
+export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData, userName}) {
   const data = {
     labels: ['Innovation', 'Independent', 'Detail-Oriented', 'Action-Oriented', 'Resilience', 'Extrovert'],
     datasets: [
@@ -50,7 +50,7 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
                 className={styles.magician} 
             />
             <div className={styles.nameContainer}>
-              <p className={styles.name}>Name! You are a...</p>
+              <p className={styles.name}>{userName}! You are a...</p>
             </div>
             <div className={styles.radarChart}>
               <Radar data={data} options={options} />

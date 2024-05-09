@@ -1,12 +1,19 @@
 import style from './Buttons.module.css';
 import { useRouter } from 'next/navigation';
 import { useRecordContext } from '@/hooks/useRecordContext';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
-export default function Buttons({buttonName, routerName, isBack, isResult}) {
+export default function Buttons({buttonName, routerName, isBack, isResult, userName}) {
     const router = useRouter()
     const {setActiveOption, setSelectedOptions, activeOption, selectedOptions} = useRecordContext()
-    const [clickSound] = useState(new Audio("/music/tap_1.mp3"))
+    
+    const [clickSound, setClickSound] = useState()
+    useEffect(() => {
+        if (typeof Audio !== 'undefined') {
+            const audio = new Audio("/music/tap_1.mp3");
+            setClickSound(audio)
+            }
+    }, []);
 
     const handleClickNext = (option) => {
         clickSound.play();
@@ -28,20 +35,21 @@ export default function Buttons({buttonName, routerName, isBack, isResult}) {
     const countA = selectedOptions.filter(option => option === "A").length
 	const countB = selectedOptions.filter(option => option === "B").length
 
-    console.log(countA, countB)
+    console.log(countA, countB);
+    console.log(userName);
 
     const handleClickResult = () => {
         clickSound.play();
         if (countA > countB) {
-            router.push({pathname:"/result/magician"})
+            router.push({pathname:`/result/magician`, query: { userName: userName }})
         } else if (countA < countB) {
-            router.push({pathname:"/result/pirate"})
+            router.push({pathname:`/result/pirate`, query: { userName: userName }})
         } else if (countA === countB) {
-            router.push({pathname:"/result/archer"})
+            router.push({pathname:`/result/archer`, query: { userName: userName }})
         } else if (countB === 6) {
-            router.push({pathname:"/result/warrior"})
+            router.push({pathname:`/result/warrior`, query: { userName: userName }})
         } else {
-            router.push({pathname:"/result/magician"})
+            router.push({pathname:`/result/magician`, query: { userName: userName }})
         }
     }
 

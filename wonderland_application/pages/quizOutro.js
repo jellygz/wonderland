@@ -11,7 +11,7 @@ import Buttons from '@/components/Buttons'
 
 
 export default function quizOutro() {
-
+    const [inputValue, setInputValue] = useState("");
     const router = useRouter()
 
   return (
@@ -29,6 +29,7 @@ export default function quizOutro() {
         <div className={styles.buttonContainer}>
             <Buttons 
                 buttonName="ENTER"
+                userName = {inputValue}
                 isResult
             />
         </div>
