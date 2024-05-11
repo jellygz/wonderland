@@ -1,0 +1,84 @@
+.main {
+    background-color: var(--white);
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.messageContainer {
+    border: 2px solid var(--mainblue);
+    border-radius: 15px;
+    width: 360px;
+    height: 1000px;
+    position: relative;
+    top: -50px;
+}
+
+.submitButton {
+    border: none;
+    outline: none;
+}
+
+.inputBox {
+    width: 318px;
+    height: 30px;
+    background-color: var(--mainblue);
+    color: var(--white);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.inputBox::placeholder {
+    position: relative;
+    left: 20px;
+    color: var(--white);
+}
+
+.formContainer {
+    display: flex;
+    align-items: center;
+}
+
+.chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.botText p {
+    width: 100px;
+    color: var(--black);
+}
+
+.botText {
+    background-color: var(--main-gold);
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    color: var(--black);
+}
+
+.userText p {
+    width: 100px;
+    color: var(--white);
+}
+
+.userText {
+    background-color: var(--main-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    flex
+}

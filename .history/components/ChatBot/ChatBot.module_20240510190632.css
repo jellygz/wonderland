@@ -1,0 +1,26 @@
+.main {
+    background-color: var(--white);
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.messageContainer {
+    border: 2px solid var(--mainblue);
+    border-radius: 15px;
+    width: 360px;
+    height: 1000px;
+    position: relative;
+    top: -50px;
+}
+
+.submitIcon im
