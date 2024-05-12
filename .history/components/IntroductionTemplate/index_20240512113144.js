@@ -1,12 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useRouter } from 'next/router'; 
 import styles from "./IntroductionTemplate.module.css";
 import Restrainer from "@/components/Restrainer";
+import { Visibility } from '@mui/icons-material';
 
 export default function IntroductionTemplate() {
     const router = useRouter(); 
     const [currentStep, setCurrentStep] = useState(0);
+
+    useEffect(() => {
+
+           const handleKeyboard = () => {
+            setCurrentStep((prev) => (prev + 1));
+            if(currentStep >1) {
+              setLink("/main");
+            }else {
+              setLink("";)
+            }
+            if(currentStep >-1) {
+              setDisplay({Visibility: "visible"});
+            }
+            console.log(currentStep);
+           }
+
+           const handle
+        // const handleKeyboard = (event) => {
+        //     if (event.key === "ArrowRight") {
+        //         setCurrentStep(prev => prev < 2 ? prev + 1 : prev);
+        //     } else if (event.key === "ArrowLeft") {
+        //         setCurrentStep(prev => prev > 0 ? prev - 1 : prev);
+        //     }
+        // };
+
+        window.addEventListener('keydown', handleKeyboard);
+        return () => window.removeEventListener('keydown', handleKeyboard);
+    }, [currentStep]);  
 
     const getContent = () => {
         switch (currentStep) {
@@ -38,21 +67,16 @@ export default function IntroductionTemplate() {
 
     const { title, head, description, icon } = getContent();
 
-    const handleArrowClick = (direction) => {
-        if (direction === 'right') {
-            if (currentStep === 2) {
-                router.push("/main");
-            } else {
-                setCurrentStep(currentStep + 1);
-            }
-        } else {
-            setCurrentStep(currentStep - 1);
-        }
+    const handleArrowClick = direction => {
+        setCurrentStep(prev => 
+            direction === 'right' ? (prev < 2 ? prev + 1 : prev) :
+            (prev > 0 ? prev - 1 : prev)
+        );
     };
 
     const handleSkip = () => {
-        router.push("/main");
-    };
+      router.push("/main");
+  };
 
     return (
         <Restrainer>
@@ -72,18 +96,14 @@ export default function IntroductionTemplate() {
                         </div>
                     </div>
                     <div className={styles.clickContainer}>
-                        <button onClick={() => handleArrowClick('left')} 
-                                style={{ backgroundColor: 'transparent', border: 'none', visibility: currentStep === 0 ? 'hidden' : 'visible' }}>
+                        <button onClick={() => handleArrowClick('left')} style={{ backgroundColor: 'transparent', border: 'none' }}>
                             <Image src="/images/leftArrowIcon.svg" alt="Left Arrow" width={40} height={40} />
                         </button>
-                        <button onClick={() => handleArrowClick('right')} 
-                                style={{ backgroundColor: 'transparent', border: 'none' }}>
+                        <button onClick={() => handleArrowClick('right')} style={{ backgroundColor: 'transparent', border: 'none' }}>
                             <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
                         </button>
                     </div>
-                    <button onClick={handleSkip} className={styles.skipButton}>
-                        Skip
-                    </button>
+                    <button onClick={handleSkip} className={styles.skipButton}>Skip</button>  
                 </div>
             </main>
         </Restrainer>

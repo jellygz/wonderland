@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 import { useRouter } from 'next/router'; 
 import styles from "./IntroductionTemplate.module.css";
 import Restrainer from "@/components/Restrainer";
 
 export default function IntroductionTemplate() {
-    const router = useRouter(); 
+    const router = useRouter();
     const [currentStep, setCurrentStep] = useState(0);
 
     const getContent = () => {
@@ -45,13 +46,9 @@ export default function IntroductionTemplate() {
             } else {
                 setCurrentStep(currentStep + 1);
             }
-        } else {
+        } else if (currentStep > 0) {
             setCurrentStep(currentStep - 1);
         }
-    };
-
-    const handleSkip = () => {
-        router.push("/main");
     };
 
     return (
@@ -72,18 +69,22 @@ export default function IntroductionTemplate() {
                         </div>
                     </div>
                     <div className={styles.clickContainer}>
-                        <button onClick={() => handleArrowClick('left')} 
-                                style={{ backgroundColor: 'transparent', border: 'none', visibility: currentStep === 0 ? 'hidden' : 'visible' }}>
-                            <Image src="/images/leftArrowIcon.svg" alt="Left Arrow" width={40} height={40} />
-                        </button>
-                        <button onClick={() => handleArrowClick('right')} 
-                                style={{ backgroundColor: 'transparent', border: 'none' }}>
-                            <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
-                        </button>
+                        {currentStep > 0 && (
+                            <button onClick={() => handleArrowClick('left')} 
+                                    style={{ backgroundColor: 'transparent', border: 'none' }}>
+                                <Image src="/images/leftArrowIcon.svg" alt="Left Arrow" width={40} height={40} />
+                            </button>
+                        )}
+                        {currentStep < 2 && (
+                            <button onClick={() => handleArrowClick('right')} 
+                                    style={{ backgroundColor: 'transparent', border: 'none' }}>
+                                <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
+                            </button>
+                        )}
                     </div>
-                    <button onClick={handleSkip} className={styles.skipButton}>
+                    <Link href="/main" className={styles.skipButton}>
                         Skip
-                    </button>
+                    </Link>
                 </div>
             </main>
         </Restrainer>

@@ -50,10 +50,6 @@ export default function IntroductionTemplate() {
         }
     };
 
-    const handleSkip = () => {
-        router.push("/main");
-    };
-
     return (
         <Restrainer>
             <main className={styles.main}>
@@ -81,9 +77,7 @@ export default function IntroductionTemplate() {
                             <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
                         </button>
                     </div>
-                    <button onClick={handleSkip} className={styles.skipButton}>
-                        Skip
-                    </button>
+                    <LinkButton link="/main" linkText="Skip" className={styles.skipButton} 
                 </div>
             </main>
         </Restrainer>

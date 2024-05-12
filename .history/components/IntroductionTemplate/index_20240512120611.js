@@ -39,8 +39,10 @@ export default function IntroductionTemplate() {
     const { title, head, description, icon } = getContent();
 
     const handleArrowClick = (direction) => {
+        console.log(`Arrow click: ${direction}`);
         if (direction === 'right') {
             if (currentStep === 2) {
+                console.log("Navigating to /main");
                 router.push("/main");
             } else {
                 setCurrentStep(currentStep + 1);
@@ -51,7 +53,12 @@ export default function IntroductionTemplate() {
     };
 
     const handleSkip = () => {
-        router.push("/main");
+        console.log("Skip button clicked, navigating to /main");
+        router.push("/main").then(() => {
+            console.log("Navigation to /main successful");
+        }).catch((err) => {
+            console.error("Failed to navigate:", err);
+        });
     };
 
     return (

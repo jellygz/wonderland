@@ -41,17 +41,13 @@ export default function IntroductionTemplate() {
     const handleArrowClick = (direction) => {
         if (direction === 'right') {
             if (currentStep === 2) {
-                router.push("/main");
+                router.push("/main"); // Navigate to main page if on the last step
             } else {
                 setCurrentStep(currentStep + 1);
             }
         } else {
             setCurrentStep(currentStep - 1);
         }
-    };
-
-    const handleSkip = () => {
-        router.push("/main");
     };
 
     return (
@@ -81,9 +77,6 @@ export default function IntroductionTemplate() {
                             <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
                         </button>
                     </div>
-                    <button onClick={handleSkip} className={styles.skipButton}>
-                        Skip
-                    </button>
                 </div>
             </main>
         </Restrainer>

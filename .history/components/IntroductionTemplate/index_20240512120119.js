@@ -50,9 +50,6 @@ export default function IntroductionTemplate() {
         }
     };
 
-    const handleSkip = () => {
-        router.push("/main");
-    };
 
     return (
         <Restrainer>

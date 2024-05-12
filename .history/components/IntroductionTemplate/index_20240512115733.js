@@ -51,7 +51,10 @@ export default function IntroductionTemplate() {
     };
 
     const handleSkip = () => {
-        router.push("/main");
+        console.log("Skipping to main");  // Debug: check if this logs
+        router.push("/main")
+            .then(() => console.log("Navigation successful"))
+            .catch(err => console.error("Navigation error:", err));
     };
 
     return (
