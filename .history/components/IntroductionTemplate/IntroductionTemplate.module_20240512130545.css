@@ -110,7 +110,7 @@
 }
 
 .descriptionImageContainer {
-    animation: floatAnimation 1.2s ease-in-out infinite alternate;
+    animation: floatAnimation 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes floatAnimation {
@@ -118,6 +118,6 @@
         transform: translateY(0);
     }
     100%{
-        transform:translateY(-12px);
+        transform:translateY(-10px);
     }
 }

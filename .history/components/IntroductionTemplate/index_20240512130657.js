@@ -64,7 +64,7 @@ export default function IntroductionTemplate() {
                     <div className={styles.frameContainer}>
                         <Image src="/images/border.svg" alt="Border Image" width={500} height={400} />
                         <div className={styles.descriptionImageContainer}>
-                            <Image src={icon} alt={title} width={80} height={80} />
+                            <Image src={icon} alt={title} width={70} height={70} />
                         </div>
                         <div className={styles.descriptionTextContainer}>
                             <h1 className={styles.headText}>{head}</h1>
