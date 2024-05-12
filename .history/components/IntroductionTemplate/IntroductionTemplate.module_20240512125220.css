@@ -1,0 +1,111 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.frameContainer {
+    position: relative;
+    width: 100%;
+    right: 46%;
+    top: 4%;
+    padding: 20px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.borderContainer {
+    position: relative;
+    width: 70%;
+    height: 800px;
+    max-width: 260px;
+    padding: 20px;
+    border: none;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer {
+    position: relative;
+    align-items: center;
+}
+
+.clickContainer {
+    position: absolute;
+    top: 50%;
+    left: -6.5%;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 80px);
+    margin: 0 -20px;
+    pointer-events: none;
+}
+
+.clickContainer > button {
+    pointer-events: auto;
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+}
+
+.descriptionImageContainer {
+   position: relative;
+   top: -50%;
+   right: -82%;
+}
+
+.headText {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.descriptionText {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+}
+
+.descriptionTextContainer {
+    position: relative;
+    top: -50%;
+    right: -55%;
+    width: 80%;
+}
+
+.descriptionTextContainer {
+    text-align: center;
+}
+
+.clickContainer svg {
+    background-color: transparent !important;
+}
+
+.skipButton {
+    width: 61px;
+    height: 27px;
+    background-color: var(--white);
+    color: var(--black);
+    position: relative;
+    top: -5%;
+    right: -55%;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skipButton:hover {
+    background-color: var(--main-blue);
+    color: var(--white);
+    box-shadow: 0 2px 5px (--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+

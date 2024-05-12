@@ -68,7 +68,7 @@ export default function IntroductionTemplate() {
                         </div>
                         <div className={styles.descriptionTextContainer}>
                             <h1 className={styles.headText}>{head}</h1>
-                            <br />
+                            
                             <p className={styles.descriptionText}>{description}</p>
                         </div>
                     </div>
