@@ -89,7 +89,7 @@
 
 .skipButton {
     width: 61px;
-    height: 30px;
+    height: 27px;
     background-color: var(--white);
     color: var(--black);
     position: relative;
@@ -98,8 +98,7 @@
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
-    text-align: center;
-    font-weight: bold;
+    margin: ;
 }
 
 .skipButton:hover {

@@ -57,6 +57,12 @@
     cursor: pointer;
 }
 
+.clickContainer > button:hover {
+    background-color: var(--white); 
+    border: 1px solid var();
+}
+
+
 .descriptionImageContainer {
    position: relative;
    top: -50%;
@@ -89,17 +95,13 @@
 
 .skipButton {
     width: 61px;
-    height: 30px;
+    height: 27px;
     background-color: var(--white);
     color: var(--black);
     position: relative;
     top: -5%;
     right: -55%;
     cursor: pointer;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
 }
 
 .skipButton:hover {

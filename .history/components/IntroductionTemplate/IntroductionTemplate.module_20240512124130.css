@@ -53,9 +53,15 @@
 .clickContainer > button {
     pointer-events: auto;
     background-color: transparent; 
-    border: none; 
-    cursor: pointer;
+    border: none; /* Removes any border if present */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
+
+.clickContainer > button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
 
 .descriptionImageContainer {
    position: relative;
@@ -89,17 +95,13 @@
 
 .skipButton {
     width: 61px;
-    height: 30px;
+    height: 27px;
     background-color: var(--white);
     color: var(--black);
     position: relative;
     top: -5%;
     right: -55%;
     cursor: pointer;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
 }
 
 .skipButton:hover {
