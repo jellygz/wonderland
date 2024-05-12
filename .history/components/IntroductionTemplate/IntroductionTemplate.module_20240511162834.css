@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.borderContainer {
+    position: relative;
+    width: 70%;
+    height: 1000;
+    max-width: 260px;
+    padding: 20px;
+    border: none;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clickContainer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 80px);
+    margin: 0 -20px;
+    pointer-events: none;
+}
+
+.clickContainer > button {
+    pointer-events: auto;
+}
+
+.arrowIcon {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+}

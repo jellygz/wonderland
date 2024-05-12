@@ -1,0 +1,83 @@
+/* Use CSS variables for easier theme management */
+:root {
+    --black: #000;
+    --white: #fff;
+    --mainblue: #007BFF; /* Or any other blue you're using */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh; /* Ensures the main container fills the viewport */
+    padding: 50px 20px; /* Adjust padding to ensure content is centered */
+    font-family: 'Josefin Sans', sans-serif; /* Consistent font usage */
+}
+
+.borderContainer {
+    width: 80%; /* Adjust based on your layout preference */
+    max-width: 600px; /* Maximum width to maintain design consistency */
+    margin: 20px auto; /* Centralize and give some space around */
+    position: relative; /* Needed for absolute positioning of elements inside */
+}
+
+/* Simulating the card-like frame around the quiz description */
+.borderContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--white); /* White border for the frame */
+    padding: 20px; /* Space inside the border */
+}
+
+.descriptionImageContainer {
+    position: relative; /* Adjust positioning if needed */
+    z-index: 2; /* Ensure it's above the pseudo-element */
+}
+
+.descriptionTextContainer {
+    margin-top: 20px; /* Space between the image and text */
+}
+
+.descriptionText {
+    text-align: center;
+    font-size: 16px; /* Adjust font size for better readability */
+    margin-bottom: 40px; /* Space above the navigation dots or skip button */
+}
+
+.arrowIcon {
+    font-size: 24px; /* Adjust the size of your arrow icons if using font icons */
+    cursor: pointer; /* Makes it obvious it's clickable */
+}
+
+.ProgressBar {
+    width: 80%; /* Control the width to match design preference */
+    height: 20px; /* Adjust height for visibility */
+    background-color: #ddd; /* Light gray background for the progress bar */
+    border-radius: 10px; /* Rounded corners for the progress bar */
+    margin-top: 20px; /* Space from text or last element */
+}
+
+.indexedStep {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    border-radius: 50%; /* Fully rounded */
+    width: 10px; /* Smaller dot size */
+    height: 10px; /* Keep width and height the same for circle shape */
+    margin: 0 5px; /* Space between dots */
+}
+
+.indexedStep.accomplished {
+    background-color: var(--mainblue); /* Highlighted when accomplished */
+}
+
+.clickContainer {
+    width: 100%; /* Ensure it spans the full width of its container */
+    padding: 10px 0; /* Padding for touch targets */
+    justify-content: space-between; /* Space elements out */
+}
