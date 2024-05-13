@@ -14,21 +14,21 @@ export default function IntroductionTemplate() {
                 return {
                     title: "Immersive Quiz",
                     head: "Immersive Quiz",
-                    description: "A quiz with Alice to understand her story. Enjoy the journey!",
+                    description: "Embark on a journey of self-discovery by taking Alice's quiz. Enjoy the experience!",
                     icon: "/images/heart.svg",
                 };
             case 1:
                 return {
                     title: "Music Box",
                     head: "Music Box",
-                    description: "Relax with our peaceful music box. Inspired by the story of Alice in Wonderland.",
+                    description: "Unwind with our peaceful music box, drawing inspiration from the tale of Alice in Wonderland.",
                     icon: "/images/musicBoxIcon.svg",
                 };
             case 2:
                 return {
                     title: "Chat Bot",
                     head: "Chat Bot",
-                    description: "Try our real-time chat bot! Don’t feel alone.",
+                    description: "Relieve stress by confiding in our real-time Chatbot! You're not alone.",
                     icon: "/images/chatBotIcon.svg",
                 };
             default:
