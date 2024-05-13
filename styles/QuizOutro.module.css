@@ -11,6 +11,14 @@
     height: auto;
 }
 
+.enterNameText {
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-size: 14.5px;
+    color: var(--white);
+    text-align: center;
+}
+
 .enterNameContainer {
     display: flex;
     flex-direction: column;
