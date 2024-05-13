@@ -29,7 +29,7 @@ export default function IntroductionTemplate() {
                     title: "Chat Bot",
                     head: "Chat Bot",
                     description: "Relieve stress by confiding in our real-time Chatbot! You're not alone.",
-                    icon: "/images/chatBotIcon.svg",
+                    icon: "/chatchat.png",
                 };
             default:
                 return {};

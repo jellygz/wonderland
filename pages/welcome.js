@@ -35,12 +35,6 @@ export default function Welcome() {
                                 <FaArrowRight />
                             </Link>
                         </div>
-                        <div className={styles.quizButton}>
-                            <Link href="/quizIntro" className={styles.buttonBlack}>
-                                <p>Go alone...</p>
-                                <FaArrowRight className={styles.arrowWhite}/>
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </main>
