@@ -7,8 +7,8 @@ export default function SwitchButton() {
     useEffect(() => {
         
 
-        return () => {audio.pause()};
-    }, [audio]);
+        return () => {};
+    }, []);
     const handleChange = () => {
         console.log(isPlaying);
         if (isPlaying) {

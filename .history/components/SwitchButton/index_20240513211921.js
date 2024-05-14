@@ -5,10 +5,13 @@ export default function SwitchButton() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [audio] = useState(new Audio("/music/trip_wonderland.mp3"))
     useEffect(() => {
-        
-
-        return () => {audio.pause()};
-    }, [audio]);
+        const handleKeyboard = (event) => {
+            if (event.key === "ArrowRight") {
+                setCurrentStep(prev => prev < 2 ? prev + 1 : prev);
+            } else if (event.key === "ArrowLeft") {
+                setCurrentStep(prev => prev > 0 ? prev - 1 : prev);
+            }
+        };
     const handleChange = () => {
         console.log(isPlaying);
         if (isPlaying) {

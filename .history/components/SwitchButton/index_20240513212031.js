@@ -6,9 +6,10 @@ export default function SwitchButton() {
     const [audio] = useState(new Audio("/music/trip_wonderland.mp3"))
     useEffect(() => {
         
+        }
 
-        return () => {audio.pause()};
-    }, [audio]);
+        return () => window.removeEventListener('keydown', handleKeyboard);
+    }, []);
     const handleChange = () => {
         console.log(isPlaying);
         if (isPlaying) {

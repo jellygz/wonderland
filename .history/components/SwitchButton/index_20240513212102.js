@@ -8,7 +8,7 @@ export default function SwitchButton() {
         
 
         return () => {audio.pause()};
-    }, [audio]);
+    }, []);
     const handleChange = () => {
         console.log(isPlaying);
         if (isPlaying) {
