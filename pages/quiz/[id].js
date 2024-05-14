@@ -99,9 +99,9 @@ export default function Quiz() {
             break
             case "5" :
                 return [
-                    { textA: "Express confusion and disbelief at the accusation, insisting that you are innocent."
+                    { textA: "Ask for evidence to support the accusation and request a fair trial to prove your innocence."
                      },
-                     { textB: "Ask for evidence to support the accusation and request a fair trial to prove your innocence."
+                     { textB: "Express confusion and disbelief at the accusation, insisting that you are innocent."
                     },
                 ];
             break

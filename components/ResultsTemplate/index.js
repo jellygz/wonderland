@@ -5,6 +5,8 @@ import React from 'react';
 import { Radar } from 'react-chartjs-2';
 import 'chart.js/auto'; 
 import MainNav from "../MainNav";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData, userName}) {
   const data = {
@@ -69,12 +71,12 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
             </div>
             <div className={styles.buttonsContainer}>
               <div className={styles.quizButton}>
-                <Link href="/quizIntro" className={styles.buttonWhite}>
-                    <p>Join Alice...</p>
+                <Link href="/resources" className={styles.buttonBlue}>
+                    <p>Learn More...</p>
                     <FaArrowRight />
                 </Link>
-                <Link href="/quizIntro" className={styles.buttonWhite}>
-                    <p>Join Alice...</p>
+                <Link href="/main" className={styles.buttonWhite}>
+                    <p>Return Home...</p>
                     <FaArrowRight />
                 </Link>
               </div>
