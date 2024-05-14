@@ -1,0 +1,18 @@
+.navBar {
+    width: 100%;
+    position: relative;
+    height: 10px; /* Adjust height as needed */
+}
+
+.navBarContainer {
+    width: 200px;
+    margin: auto;
+    position: relative;
+    bottom: 10px; /* Adjust to position it at the bottom */
+    text-align: center;
+}
+
+.dot {
+    position: absolute;
+    transform: translateX(-50%);
+}

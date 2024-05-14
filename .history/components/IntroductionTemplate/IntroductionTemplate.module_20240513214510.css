@@ -41,7 +41,7 @@
 
 .clickContainer {
     position: absolute;
-    top: 62%;
+    top: 50%;
     left: -6.5%;
     display: flex;
     justify-content: space-between;
@@ -93,7 +93,8 @@
     background-color: var(--white);
     color: var(--black);
     position: relative;
-    right: -33%;
+    top: -5%;
+    right: -55%;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
@@ -124,5 +125,5 @@
 .navDotContainer {
     display: flex;
     justify-content: center;
-    margin-top: -95%;
+    margin-top: -50%;
 }

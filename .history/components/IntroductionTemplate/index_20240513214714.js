@@ -86,10 +86,11 @@ export default function IntroductionTemplate() {
                             <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
                         </button>
                     </div>
+                    
                 </div>
                 <button onClick={handleSkip} className={styles.skipButton}>
-                    Skip
-                </button>
+                        Skip
+                    </button>
             </main>
         </Restrainer>
     );

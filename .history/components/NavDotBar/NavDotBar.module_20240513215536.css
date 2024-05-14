@@ -10,5 +10,5 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 50px; 
+    bottom: 20px; /* Adjust to control the height from the bottom */
 }

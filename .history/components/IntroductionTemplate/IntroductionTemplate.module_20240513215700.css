@@ -7,13 +7,12 @@
     color: var(--white);
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
+    position: relative;
 }
 
 .frameContainer {
     position: relative;
     width: 100%;
-    right: 46%;
-    top: 4%;
     padding: 20px;
     height: auto;
     align-items: center;
@@ -23,10 +22,8 @@
 .borderContainer {
     position: relative;
     width: 70%;
-    height: 800px;
     max-width: 260px;
     padding: 20px;
-    border: none;
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -39,9 +36,17 @@
     align-items: center;
 }
 
+.navDotContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px; /* Adjust to control the height from the bottom */
+}
+
 .clickContainer {
     position: absolute;
-    top: 62%;
+    top: 50%;
     left: -6.5%;
     display: flex;
     justify-content: space-between;
@@ -58,9 +63,9 @@
 }
 
 .descriptionImageContainer {
-   position: relative;
-   top: -50%;
-   right: -82%;
+    position: relative;
+    top: -50%;
+    right: -82%;
 }
 
 .headText {
@@ -77,14 +82,7 @@
     top: -50%;
     right: -55%;
     width: 80%;
-}
-
-.descriptionTextContainer {
     text-align: center;
-}
-
-.clickContainer svg {
-    background-color: transparent !important;
 }
 
 .skipButton {
@@ -92,8 +90,9 @@
     height: 30px;
     background-color: var(--white);
     color: var(--black);
-    position: relative;
-    right: -33%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
@@ -113,16 +112,10 @@
 }
 
 @keyframes floatAnimation {
-    0%{
+    0% {
         transform: translateY(0);
     }
-    100%{
-        transform:translateY(-14px);
+    100% {
+        transform: translateY(-14px);
     }
-}
-
-.navDotContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -95%;
 }

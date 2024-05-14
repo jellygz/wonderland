@@ -11,6 +11,7 @@ export default function NavDotBar({ dotNumber }) {
             <div className={styles.navBar}>
                 {[0, 1, 2].map((dot, index) => (
                     <Image
+                        style={{ marginLeft: `${index * 20}px` }}
                         src={dotNumber === dot ? navDotB : navDotE}
                         width={10}
                         height={10}
