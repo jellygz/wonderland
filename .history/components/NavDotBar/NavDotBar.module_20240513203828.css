@@ -1,0 +1,11 @@
+.navBar {
+    width: 40%;
+    margin: auto;
+    position: relative;
+}
+
+.dot {
+    /* position: absolute; */
+    /* top: 50%;
+    transform: translateY(-50%); */
+}

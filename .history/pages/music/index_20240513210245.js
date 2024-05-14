@@ -120,7 +120,7 @@ export default function Music() {
 
       const formatTime = (timeInSeconds) => {
         console.log("timeInSeconds: ", timeInSeconds)
-        if(isNaN(timeInSeconds)){
+        if(is(timeInSeconds )){
           return "00:00"
         }
         const minutes = Math.floor(timeInSeconds/60);
@@ -128,7 +128,7 @@ export default function Music() {
         const formatMinutes = minutes<10?`0${minutes}`:minutes;
         const formatSeconds = seconds<10?`0${seconds}`:seconds;
         console.log("timeInMinutes: ", formatMinutes,"timeInSeconds: ", formatSeconds);
-        return isNaN(formatMinutes)?"00:00": `${formatMinutes}:${formatSeconds}`;
+        return formatMinutes==NaN||formatMinutes==undefined?"00:00": `${formatMinutes}:${formatSeconds}`;
       }
 
       return (

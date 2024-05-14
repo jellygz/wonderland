@@ -1,0 +1,20 @@
+import navDotB from "@/public/images/navDotB.svg";
+import navDotE from "@/public/images/navDotE.svg";
+import Image from "next/image";
+import sty
+
+export default function NavDotBar({dotNumber}) {
+    const totalDots = 3;
+    const dotSpacing = 100/(totalDots - 1);
+
+    return (
+        <div className={styles.navDotBar}>
+                 
+            
+           { [0,1,2].map((dot,index) => (
+                <Image style={{ left: `${(index * dotSpacing)}%` }} src={dotNumber == dot?navDotB: navDotE} width={16} height={16} alt="navgation dot" key={index} className={styles.dot} />
+            ))}
+            
+        </div>
+       )
+}

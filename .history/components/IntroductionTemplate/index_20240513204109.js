@@ -76,7 +76,6 @@ export default function IntroductionTemplate() {
                         </div>
                        
                     </div>
-                    <NavDotBar dotNumber={currentStep}/>
                     <div className={styles.clickContainer}>
                         <button onClick={() => handleArrowClick('left')} 
                                 style={{ backgroundColor: 'transparent', border: 'none', visibility: currentStep === 0 ? 'hidden' : 'visible' }}>

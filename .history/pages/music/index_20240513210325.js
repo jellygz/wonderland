@@ -128,7 +128,7 @@ export default function Music() {
         const formatMinutes = minutes<10?`0${minutes}`:minutes;
         const formatSeconds = seconds<10?`0${seconds}`:seconds;
         console.log("timeInMinutes: ", formatMinutes,"timeInSeconds: ", formatSeconds);
-        return isNaN(formatMinutes)?"00:00": `${formatMinutes}:${formatSeconds}`;
+        return (formatMinutes)?"00:00": `${formatMinutes}:${formatSeconds}`;
       }
 
       return (

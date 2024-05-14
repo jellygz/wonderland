@@ -1,0 +1,19 @@
+.navBar {
+    width: 100%;
+    /* margin: auto; */
+    po
+
+}
+
+.navBarContainer {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    /* position: absolute; */
+    /* top: 50%;
+    transform: translateY(-50%); */
+}
