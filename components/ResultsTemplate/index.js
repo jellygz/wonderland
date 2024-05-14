@@ -8,7 +8,7 @@ import MainNav from "../MainNav";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData, userName}) {
+export default function ResultsTemplate({title, mainImageSrc, characteristics, description, radarData, userName, secondDescription, thirdDescription, leftMatchImage, leftMatchText, rightMatchImage, rightMatchText}) {
   const data = {
     labels: ['Innovation', 'Independent', 'Detail-Oriented', 'Action-Oriented', 'Resilience', 'Extrovert'],
     datasets: [
@@ -59,15 +59,33 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
             />
             <div className={styles.nameContainer}>
               <p className={styles.name}>{userName}! You are a...</p>
+              <h1 className={styles.result}>{title}</h1>
             </div>
-            <div className={styles.radarChart}>
-              <Radar data={data} options={options} />
-            </div>
-            <h1 className={styles.result}>{title}</h1>
             <div className={styles.characteristicsContainer}>
               <p className={styles.characteristics}>{characteristics}</p>
             </div>
             <div className={styles.description}>{description}</div>
+            <div className={styles.radarChart}>
+              <Radar data={data} options={options} />
+            </div>
+            <div className={styles.description}>{secondDescription}</div>
+            <div className={styles.descriptionList}>{thirdDescription}</div>
+            </div>
+            <div className={styles.matchesContainer}>
+              <div>
+                <div className={styles.matchImageContainer}>
+                  {leftMatchImage}
+                </div>
+                <p className={styles.matchTitle}>{leftMatchText}</p>
+                <p className={styles.matchDesc}>BEST MATCH</p>
+              </div>
+              <div>
+                <div className={styles.matchImageContainer}>
+                  {rightMatchImage}
+                </div>
+                <p className={styles.matchTitle}>{rightMatchText}</p>
+                <p className={styles.matchDesc}>WORST MATCH</p>
+              </div>
             </div>
             <div className={styles.buttonsContainer}>
               <div className={styles.quizButton}>

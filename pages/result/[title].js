@@ -7,6 +7,7 @@ import mainPirate from "@/public/818.png";
 import mainArcher from "@/public/1337.png";
 import mainWarrior from "@/public/1160.png";
 import { useSearchParams } from 'next/navigation'
+import Image from "next/image";
 
 
 export default function Result() {
@@ -59,6 +60,136 @@ export default function Result() {
     }
   }
 
+  const secondDescriptionValue = (res) => {
+    switch(res) {
+        case "magician": return "According to the your graph, one way to overcome your weaknesses would be to visualize yourself achieving all your goals. What steps would you need to take in order to be that self?";
+        case "pirate": return "According to the your graph, one way to overcome your weaknesses would be to learn how to prioritize tasks and to tackle the most important ones to avoid anything becoming too overwhelming.";
+        case "archer": return "According to the your graph, one way to overcome your weaknesses would be to apply self-compassion into your daily life and to be able to break down big tasks into smaller ones.";
+        case "warrior": return "According to the your graph, one way to overcome your weaknesses would be to ask for support from others to avoid any tendencies of over-commiting to tasks";
+    }
+  }
+
+  const thirdDescriptionValue = (res) => {
+    switch(res) {
+        case "magician": return (<ul style={{margin: 0, padding:0}}> 
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          </ul>);
+        case "pirate": return (<ul style={{margin: 0, padding:0}}>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          </ul>);
+        case "archer": return (<ul style={{margin: 0, padding:0}}>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          </ul>);
+        case "warrior": return (<ul style={{margin: 0, padding:0}}>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Ch. 1: Acceptance of Uncertainty</li>
+          </ul>);
+    }
+  }
+
+  const leftMatchImageValue = (res) => {
+    switch(res) {
+        case "magician": return (
+          <Image style={{height: "auto"}}
+          src="/1337.png"
+          alt="Archer"
+          width={155} 
+          height={200} />
+        )
+        case "pirate": return (
+          <Image style={{height: "auto"}}
+          src="/818.png"
+          alt="Pirate"
+          width={155} 
+          height={200} />
+        )
+        case "archer": return (
+          <Image style={{height: "auto"}}
+          src="/818.png"
+          alt="Pirate"
+          width={155} 
+          height={200} />
+        )
+        case "warrior": return (
+          <Image style={{height: "auto"}}
+          src="/1337.png"
+          alt="Archer"
+          width={155} 
+          height={200} />
+        )
+    }
+  }
+
+  const rightMatchImageValue = (res) => {
+    switch(res) {
+        case "magician": return (
+          <Image style={{height: "auto"}}
+          src="/818.png"
+          alt="Pirate"
+          width={155} 
+          height={200} />
+        )
+        case "pirate": return (
+          <Image style={{height: "auto"}}
+          src="/1347 1 (1).png"
+          alt="Magician"
+          width={155} 
+          height={200} />
+        )
+        case "archer": return (
+          <Image style={{height: "auto"}}
+          src="/1160.png"
+          alt="Warrior"
+          width={155} 
+          height={200} />
+        )
+        case "warrior": return (
+          <Image style={{height: "auto"}}
+          src="/1160.png"
+          alt="Warrior"
+          width={155} 
+          height={200} />
+        )
+    }
+  }
+
+  const leftMatchTextValue = (res) => {
+    switch(res) {
+        case "magician": return "ARCHER";
+        case "pirate": return "PIRATE";
+        case "archer": return "PIRATE";
+        case "warrior": return "ARCHER";
+    }
+  }
+
+  const rightMatchTextValue = (res) => {
+    switch(res) {
+        case "magician": return "PIRATE";
+        case "pirate": return "MAGICIAN";
+        case "archer": return "WARRIOR";
+        case "warrior": return "WARRIOR";
+    }
+  }
+
   return (
     <>
       <Head>
@@ -75,6 +206,12 @@ export default function Result() {
           description={descriptionValue(router.query.title)}
           radarData={radarChartData[router.query.title.toLowerCase()]}
           userName={userName}
+          secondDescription={secondDescriptionValue(router.query.title)}
+          thirdDescription={thirdDescriptionValue(router.query.title)}
+          leftMatchImage={leftMatchImageValue(router.query.title)}
+          rightMatchImage={rightMatchImageValue(router.query.title)}
+          leftMatchText={leftMatchTextValue(router.query.title)}
+          rightMatchText={rightMatchTextValue(router.query.title)}
         />
       }
     </>
