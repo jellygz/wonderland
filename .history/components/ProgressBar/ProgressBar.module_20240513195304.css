@@ -1,0 +1,16 @@
+.progressBar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--blue);
+}
+
+.progressLine {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    position: absolute;
+    top: 50
+}
