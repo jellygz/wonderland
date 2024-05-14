@@ -15,7 +15,8 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
       {
         label: 'Your Personality Traits',
         data: radarData || [20, 30, 40, 50, 60, 70], 
-        backgroundColor: 'rgba(98, 124, 169, 0.5)',
+        backgroundColor: 'var(',
+        borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,
         fill: true
       }
