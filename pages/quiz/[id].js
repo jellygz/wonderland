@@ -42,22 +42,22 @@ export default function Quiz() {
             break
             case "3" :
                 return (<div>
-                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and 
+                You stumble upon a tea party with unknown <br /> characters chattering nonsense while <br /> staring at you. One comes up to you, <br /> offering a cup of tea. It glistens in the sun <br /> with rising smoke from the heat.
             </div>)
             break
             case "4" :
                 return (<div>
-                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and 
+                A small voice calls out your name from the <br /> ground, where a caterpillar awaits, offering <br /> its prediction about your inevitable fate once <br /> you leave Wonderland....
             </div>)
             break
             case "5" :
                 return (<div>
-                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and 
+                The queen of the forest accuses you of <br /> painting her red roses white in her garden. <br /> You are about to face severe punishment for <br /> a crime you did not commit...
             </div>)
             break
             case "6" :
                 return (<div>
-                After a long trip down the rabbit hole, you <br /> were cushioned by soft grass and greeted by <br /> a smiling cat. It starts telling you to go back <br /> up and 
+                In a garden of lovely flowers, you encounter <br /> a dead-end. You have five minutes before <br /> you risk eternal entrapment in the forest. <br /> What would you do?
             </div>)
             break
         }
@@ -67,80 +67,60 @@ export default function Quiz() {
         switch(id) {
             case "1" :
                 return [
-                    { textA: "Start to wonder and feel curiosity about the adventures down below..."
+                    { textA: "Start to wonder whether this fall is going to be endless..."
                      },
-                    { textB: "Start to question whether or not to try and grab onto something to stop the fall." 
+                    { textB: "Start reflecting on each decision I made to have led me to this moment."
                     },
                 ];
             break
             case "2" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    { textA: "Politely thank the cat for its concern but assert my right to explore..."
+                     },
+                    { textB: "Tell the cat that I'll consider going back up if it can provide a compelling reason..."
+                    },
                 ];
             break
             case "3" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    { textA: "Politely decline the drink while asking why everyone is staring at you."
+                     },
+                    { textB: "Warily accept the drink while asking what it is made of."
+                    },
                 ];
             break
             case "4" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    { textA: "Ask the caterpillar for advice on how to navigate the challenges that await me outside."
+                     },
+                     { textB: "Laugh off the caterpillar's prediction, expressing confidence in my ability to shape my own destiny."
+                    },
                 ];
             break
             case "5" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    { textA: "Express confusion and disbelief at the accusation, insisting that you are innocent."
+                     },
+                     { textB: "Ask for evidence to support the accusation and request a fair trial to prove your innocence."
+                    },
                 ];
             break
             case "6" :
                 return [
-                    { textA: (
-                        <div>
-                            Start to wonder and feel curiosity <br /> about the adventures down below...
-                        </div>
-                    ) },
-                    { textB: (
-                        <div>
-                            Start to question whether or not to try <br /> and grab onto something to stop the fall.
-                        </div>
-                    ) },
+                    // { textA: (
+                    //     <div>
+                    //         Start to wonder and feel curiosity <br /> about the adventures down below...
+                    //     </div>
+                    // ) },
+                    // { textB: (
+                    //     <div>
+                    //         Start to question whether or not to try <br /> and grab onto something to stop the fall.
+                    //     </div>
+                    // ) },
+                    { textA: "Use the five minutes to carefully backtrack and retrace my steps, searching for any missed paths"
+                     },
+                     { textB: "Quickly assess the dead-end for any hidden passages that might lead to another path."
+                    },
                 ];
             break
         }

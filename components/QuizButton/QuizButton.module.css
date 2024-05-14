@@ -24,14 +24,14 @@
 
 .quizButtons {
     border: solid 2px var(--main-blue);
-    width: 19rem;
+    width: 20rem;
     background-color: #FFFF;
     color: var(--mainblue);
-    border-radius: 20px;
+    border-radius: 23px;
     font-family: 'Josefin Sans';
-    font-size: 13.5px;
+    font-size: 13px;
     text-align: left;
-    padding: 10px;
+    padding: 10.5px;
 }
 
 .arrow {

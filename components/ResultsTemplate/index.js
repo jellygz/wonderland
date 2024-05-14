@@ -67,6 +67,18 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
             </div>
             <div className={styles.description}>{description}</div>
             </div>
+            <div className={styles.buttonsContainer}>
+              <div className={styles.quizButton}>
+                <Link href="/quizIntro" className={styles.buttonWhite}>
+                    <p>Join Alice...</p>
+                    <FaArrowRight />
+                </Link>
+                <Link href="/quizIntro" className={styles.buttonWhite}>
+                    <p>Join Alice...</p>
+                    <FaArrowRight />
+                </Link>
+              </div>
+            </div>
           </main>
       </Restrainer>
     </>
