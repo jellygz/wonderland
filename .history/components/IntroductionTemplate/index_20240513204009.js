@@ -68,15 +68,12 @@ export default function IntroductionTemplate() {
                         <div className={styles.descriptionImageContainer}>
                             <Image src={icon} alt={title} width={65} height={65} />
                         </div>
-                       
                         <div className={styles.descriptionTextContainer}>
                             <h1 className={styles.headText}>{head}</h1>
                             <br />
                             <p className={styles.descriptionText}>{description}</p>
                         </div>
-                       
                     </div>
-                    <NavDotBar dotNumber={currentStep}/>
                     <div className={styles.clickContainer}>
                         <button onClick={() => handleArrowClick('left')} 
                                 style={{ backgroundColor: 'transparent', border: 'none', visibility: currentStep === 0 ? 'hidden' : 'visible' }}>

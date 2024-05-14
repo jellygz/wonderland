@@ -1,0 +1,11 @@
+.navBar {
+    width: 30%;
+    height: 2px;
+    background-color: var(--blue);
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
