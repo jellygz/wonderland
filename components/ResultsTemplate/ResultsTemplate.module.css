@@ -15,11 +15,23 @@
     padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
 }
 
+.nameContainer {
+    color: var(--mainblue);
+    margin-top: 50px;
+    width: 100%;
+}
+
+.nameContainer p {
+    margin: 0;
+    text-align: left;
+}
+
 .h1 {
     font-family: var(--chapter-font);
     font-size: medium;
     font-weight: bold;
-    color: var(--mainblue)
+    color: var(--mainblue);
+    text-align: center;
 }
 
 .magician {
@@ -34,6 +46,8 @@
     font-size: 3.5rem;
     font-weight: bold;
     color: var(--main-blue);
+    margin: 0;
+    text-align: center;
 }
 
 .characteristicsContainer {
@@ -41,6 +55,7 @@
     padding: 0px 26px;
     background: var(--main-blue);
     border-radius: 25px;
+    margin-bottom: 15px;
 }
 
 .characteristics {
@@ -57,6 +72,53 @@
     border: 2.5px solid var(--main-blue);
     padding: 25px;
     border-radius: 25px;
+    margin-bottom: 18px;
+}
+
+.descriptionList {
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    text-align: left;
+    background-color: var(--main-blue);
+    color: var(--white);
+    padding: 20px 41.5px;
+    border-radius: 25px;
+}
+
+.matchesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.matchImageContainer {
+    border: 2px solid var(--mainblue);
+    border-radius: 25px;
+    padding: 0 15px;
+    margin-bottom: 12px;
+}
+
+.matchTitle {
+    font-family: "Cardo";
+    font-weight: 800;
+    font-size: 25px;
+    color: var(--main-blue);
+    text-align: center;
+    margin: 0;
+}
+
+.matchDesc {
+    font-family: "Josefin Sans";
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--main-blue);
+    text-align: center;
+    margin: 0;
+}
+
+.radarChart {
+    margin-top: 15px;
 }
 
 .buttonsContainer {
