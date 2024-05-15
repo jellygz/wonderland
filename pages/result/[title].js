@@ -71,7 +71,7 @@ export default function Result() {
 
   const thirdDescriptionValue = (res) => {
     switch(res) {
-        case "magician": return (<ul style={{margin: 0, padding:0}}> 
+        case "magician": return (<ul style={{margin: 0, padding:0, textAlign:"left"}}> 
           <li>Set clear, specific goals.</li>
           <li>Prioritize high-impact tasks.</li>
           <li>Establish daily routines.</li>
@@ -88,11 +88,11 @@ export default function Result() {
           <li>Seek feedback regularly.</li>
           </ul>);
         case "archer": return (<ul style={{margin: 0, padding:0}}>
-          <li>Practice self-compassion daily.</li>
-          <li>Set realistic, achievable goals.</li>
+          <li>Practice self-compassion.</li>
+          <li>Set realistic goals.</li>
           <li>Break tasks into steps.</li>
-          <li>Accept mistakes as learning</li>
-          <li>Focus on progress, not perfection.</li>
+          <li>Accept mistakes.</li>
+          <li>Focus on progress.</li>
           <li>Celebrate small accomplishments.</li>
           </ul>);
         case "warrior": return (<ul style={{margin: 0, padding:0}}>

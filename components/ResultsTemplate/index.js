@@ -67,9 +67,8 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
             <div className={styles.radarChart}>
               <Radar data={data} options={options} />
             </div>
-            <div className={styles.description}>{secondDescription}</div>
+            <div className={styles.descriptionBottom}>{secondDescription}</div>
             <div className={styles.descriptionList}>{thirdDescription}</div>
-            </div>
             <div className={styles.matchesContainer}>
               <div>
                 <div className={styles.matchImageContainer}>
@@ -97,6 +96,7 @@ export default function ResultsTemplate({title, mainImageSrc, characteristics, d
                     <FaArrowRight />
                 </Link>
               </div>
+            </div>
             </div>
           </main>
       </Restrainer>
