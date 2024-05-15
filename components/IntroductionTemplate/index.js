@@ -81,32 +81,17 @@ export default function IntroductionTemplate() {
                             <p className={styles.descriptionText}>{description}</p>
                         </div>
                     </div>
-                    <div className={styles.navDotContainer}>
-                        <NavDotBar dotNumber={currentStep} />
-                    </div>
-                    <div className={styles.clickContainer}>
-                        <button onClick={() => handleArrowClick('left')}
-                            style={{ backgroundColor: 'transparent', border: 'none', visibility: currentStep === 0 ? 'hidden' : 'visible' }}>
-                            <Image src="/images/leftArrowIcon.svg" alt="Left Arrow" width={40} height={40} />
-                        </button>
-                        <button style={{ backgroundColor: 'transparent', border: 'none' }} onClick={() => handleArrowClick('right')}>
-                            <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
-                        </button>
                     <button className={styles.button} onClick={() => handleArrowClick('right')} 
-                        style={{ backgroundColor: 'transparent', border: 'none' }}>
+                        style={{ backgroundColor: 'transparent', border: 'none'}}>
                         <Image src="/images/rightArrowIcon.svg" alt="Right Arrow" width={40} height={40} />
                     </button>
-                    </div>
-                    <Image className={styles.progressBar} src={dot} alt="Progress Bar" width={35} height={25} />
+                </div>
+                <Image className={styles.progressBar} src={dot} alt="Progress Bar" width={35} height={25} />
                     <div className={styles.skipButtonContainer}>
                         <button onClick={handleSkip} className={styles.skipButton}>
                             Skip
                         </button>
                     </div>
-                </div>
-                <button onClick={handleSkip} className={styles.skipButton}>
-                    Skip
-                </button>
             </div>
             </main>
         </Restrainer>
