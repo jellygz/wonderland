@@ -13,12 +13,21 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    animation: floatAnimation 2s infinite alternate;
 }
 
 .cardQueen {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    animation: floatAnimation 2.5s infinite alternate;
+}
+
+.alice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 .firstText {
@@ -46,10 +55,18 @@
     opacity: 0;
     animation: secondFade 15s ease-in-out 15s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .thirdTextContainer {
@@ -106,4 +123,13 @@
 @keyframes overlay {
     0% {visibility: hidden;}
     100% {visibility: visible;}
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }

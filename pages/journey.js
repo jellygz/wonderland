@@ -25,22 +25,22 @@ export default function Journey() {
           <main className={styles.main}>
             <div className={styles.clickOverlay} onClick={handleClick}></div>
             <div className={styles.cardKing}>
-              <Image src="/king 1.png" alt="King Card" width={50} height={50} />
+              <Image src="/king 1.png" alt="King Card" width={65} height={65} />
             </div>
               <div className={styles.container}>
                 <div className={styles.firstTextContainer}>
-                    <p className={styles.firstText}>Wonderland is an innovative app crafted to dive into users’ mental well-being in an interactive and engaging manner. Drawing inspiration from ‘Alice in Wonderland,’ this appseeks to evaluate users’ burnout levels through an immersive and playful quiz. By incorporating elements from the beloved story line of Alice, our aim is to take our users into a similar journey where they can learn more about themselves and reflect upon their mental health.</p>
+                    <p className={styles.firstText}>Wonderland is an innovative app designed to dive into users' well-being, fostering reflection and personal growth in an interactive, engaging way.</p>
                 </div>
                 <div className={styles.secondTextContainer}>
-                    <p className={styles.firstText}>Wonderland is an innovative app crafted to dive into users’ mental well-being in an interactive and engaging manner. Drawing inspiration from ‘Alice in Wonderland,’ this appseeks to evaluate users’ burnout levels through an immersive and playful quiz. By incorporating elements from the beloved story line of Alice, our aim is to take our users into a similar journey where they can learn more about themselves and reflect upon their mental health.</p>
-                    <Image className={styles.cardQueen} src="/person.png" alt="Queen Card" width={70} height={70} />
+                    <p className={styles.firstText}>You will be guided to a page that offers features to aid relaxation and self-discovery within our app. Dive in and explore with Alice as your guide!</p>
+                    <Image className={styles.alice} src="/Rectangle 33.png" alt="Alice" width={200} height={70} />
                 </div>
                 <div className={styles.thirdTextContainer}>
                     <p className={styles.firstText}>Click Anywhere To Start</p>
                 </div>
               </div>
               <div className={styles.cardQueen}>
-                <Image src="/queen 1.png" alt="Queen Card" width={50} height={50} />
+                <Image src="/queen 1.png" alt="Queen Card" width={65} height={65} />
               </div>
           </main>
       </Restrainer>

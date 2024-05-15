@@ -38,7 +38,7 @@
     left: 50px;
     width: 50px;
     height: auto;
-    animation: floatAnimation 2.5s infinite alternate; /* Adjust duration and timing as needed */
+    animation: floatAnimation 2.5s infinite alternate;
 }
 
 .alice {
@@ -47,7 +47,7 @@
     bottom: 0;
     width: 350px;
     height: auto;
-    animation: floatAnimation 2s infinite alternate; /* Adjust duration and timing as needed */
+    animation: floatAnimation 2s infinite alternate;
 }
 
 @keyframes floatAnimation {
@@ -55,7 +55,7 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-20px); /* Adjust the distance you want the image to float */
+        transform: translateY(-20px);
     }
 }
 
