@@ -41,19 +41,33 @@
     align-items: center;
     border: 2.5px solid var(--mainblue);
     border-radius: 25px;
-    padding: 30px;
+    padding: 40px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .articleText {
     font-family: "Josefin Sans";
     color: var(--mainblue);
+    margin: 0;
 }
 
 .articleDesc {
     font-family: "Josefin Sans";
     color: var(--mainblue);
     font-size: medium;
+    margin: 0;
+}
+
+.articleDescContainer {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: auto;
 }
 
 .characteristicsContainer {

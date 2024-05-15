@@ -23,30 +23,34 @@ export default function Resources() {
                 <h1 className={styles.h1}>RESOURCES</h1>
                 <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
               </div>
-            <div className={styles.article}>
+            <Link href="https://www.fastcompany.com/90383266/personality-type-and-procrastination" target="_blank" className={styles.article}>
                 <div className={styles.articleDescContainer}>
                     <h1 className={styles.articleText}>Article 01</h1>
                     <p className={styles.articleDesc}>How to combat procrastination based on personality type</p>
+                    <Image className={styles.arrow} src="/Arrow 4.png" alt="Line" width={50} height={400} />
                 </div>
-            </div>
-            <div className={styles.article}>
+            </Link>
+            <Link href="https://thrivemyway.com/procrastination-statss/" target="_blank" className={styles.article}>
                 <div className={styles.articleDescContainer}>
                     <h1 className={styles.articleText}>Article 02</h1>
                     <p className={styles.articleDesc}>Life-Changing Procrastination Stats 2024 [Trends and Facts]</p>
+                    <Image className={styles.arrow} src="/Arrow 4.png" alt="Line" width={50} height={400} />
                 </div>
-            </div>
-            <div className={styles.article}>
+            </Link>
+            <Link href="https://gitnux.org/procrastination-statistics/" target="_blank" className={styles.article}>
                 <div className={styles.articleDescContainer}>
                     <h1 className={styles.articleText}>Article 03</h1>
                     <p className={styles.articleDesc}>Must-Know Procrastination Statistics [Latest Report]</p>
+                    <Image className={styles.arrow} src="/Arrow 4.png" alt="Line" width={50} height={400} />
                 </div>
-            </div>
-            <div className={styles.article}>
+            </Link>
+            <Link href="/error" className={styles.article}>
                 <div className={styles.articleDescContainer}>
                     <h1 className={styles.articleText}>Article 04</h1>
                     <p className={styles.articleDesc}>How to combat procrastination based on personality type</p>
+                    <Image className={styles.arrow} src="/Arrow 4.png" alt="Line" width={50} height={400} />
                 </div>
-            </div>
+            </Link>
             <div className={styles.bottomContainer}>
               <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
               </div>
