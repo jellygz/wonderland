@@ -54,7 +54,7 @@ export default function MainNav({isQuizPage}) {
               <Link href="/about">Tutorial</Link>
             </li>
             <li className={styles.link}>
-              <Link href="/about">Resources</Link>
+              <Link href="/resources">Resources</Link>
             </li>
           </ul>
           <p className={styles.about}>&copy; Jillian, Celine</p>

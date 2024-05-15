@@ -31,3 +31,43 @@
     align-items: center;
     margin-bottom: 40px;
 }
+
+.bottomContainer {
+    margin-top: 30px;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    border: 2.5px solid var(--mainblue);
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.articleText {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+}
+
+.articleDesc {
+    font-family: "Josefin Sans";
+    color: var(--mainblue);
+    font-size: medium;
+}
+
+.characteristicsContainer {
+    border: 1px solid var(--mainblue);
+    padding: 0px 26px;
+    background: var(--mainblue);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.characteristics {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: var(--white-bg);
+    font-size: 15px;
+}
+

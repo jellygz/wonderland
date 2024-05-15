@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/About.module.css";
+import styles from "@/styles/Resources.module.css";
 import Link from "next/link";
 import Restrainer from "@/components/Restrainer";
 import MainNav from '@/components/MainNav'
 
 
-export default function About() {
+export default function Resources() {
   return (
     <>
       <Head>
@@ -23,8 +23,33 @@ export default function About() {
                 <h1 className={styles.h1}>RESOURCES</h1>
                 <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
               </div>
-              
+            <div className={styles.article}>
+                <div className={styles.articleDescContainer}>
+                    <h1 className={styles.articleText}>Article 01</h1>
+                    <p className={styles.articleDesc}>How to combat procrastination based on personality type</p>
+                </div>
+            </div>
+            <div className={styles.article}>
+                <div className={styles.articleDescContainer}>
+                    <h1 className={styles.articleText}>Article 02</h1>
+                    <p className={styles.articleDesc}>Life-Changing Procrastination Stats 2024 [Trends and Facts]</p>
+                </div>
+            </div>
+            <div className={styles.article}>
+                <div className={styles.articleDescContainer}>
+                    <h1 className={styles.articleText}>Article 03</h1>
+                    <p className={styles.articleDesc}>Must-Know Procrastination Statistics [Latest Report]</p>
+                </div>
+            </div>
+            <div className={styles.article}>
+                <div className={styles.articleDescContainer}>
+                    <h1 className={styles.articleText}>Article 04</h1>
+                    <p className={styles.articleDesc}>How to combat procrastination based on personality type</p>
+                </div>
+            </div>
+            <div className={styles.bottomContainer}>
               <Image className={styles.line} src="/image 4.png" alt="Line" width={160} height={400} />
+              </div>
             </div>
           </main>
       </Restrainer>
