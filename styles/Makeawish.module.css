@@ -43,3 +43,26 @@
     font-weight: 300;
     text-align: left;
 }
+
+.inputBox {
+    background-color: var(--black);
+    color: var(--white);
+    border: 0.5px solid var(--white);
+    border-radius: 15px;
+    padding: 15px;
+    width: 285px;
+    margin-top: 20px;
+    resize: none;
+}
+
+.bottomContainer {
+    position: relative;
+}
+
+.arrowButton {
+    position: absolute;
+    right: 15.5px;
+    bottom: 15.5px;
+    text-decoration: none;
+    color: var(--white);
+}

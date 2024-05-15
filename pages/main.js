@@ -44,7 +44,7 @@ export default function Main() {
                                 <hr className={styles.line} />
                                 <Image className={styles.buttonImage} src="/musical-notes 1.png" alt="Musical Notes" width={50} height={50} />
                             </Link>
-                            <Link className={styles.button} href="/quizIntro">
+                            <Link className={styles.button} href="/makeawish">
                                 <Image className={styles.buttonImage} src="/star 1.png" alt="Stars" width={50} height={50} />
                                 <hr className={styles.line} />
                                 MAKE A WISH
