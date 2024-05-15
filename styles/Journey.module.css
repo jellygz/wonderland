@@ -43,7 +43,7 @@
 
 .firstTextContainer {
     opacity: 0;
-    animation: firstFade ease-in-out 15s;
+    animation: firstFade ease-in-out 10s;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -53,7 +53,7 @@
 
 .secondTextContainer {
     opacity: 0;
-    animation: secondFade 15s ease-in-out 15s;
+    animation: secondFade 10s ease-in-out 10s;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -71,7 +71,7 @@
 
 .thirdTextContainer {
     opacity: 0;
-    animation: thirdFade 3s forwards 30s, popping 1s linear 30s infinite;
+    animation: thirdFade 3s forwards 20s, popping 1s linear 20s infinite;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -87,7 +87,7 @@
 
 .clickOverlay {
     visibility: hidden;
-    animation: overlay 3s forwards 30s;
+    animation: overlay 3s forwards 20s;
     position: absolute;
     width: 100%;
     height: 100%;
