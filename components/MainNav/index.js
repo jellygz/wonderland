@@ -51,7 +51,7 @@ export default function MainNav({isQuizPage}) {
               <Link href="/about">About Us</Link>
             </li>
             <li className={styles.link}>
-              <Link href="/about">Tutorial</Link>
+              <Link href="/journey">Tutorial</Link>
             </li>
             <li className={styles.link}>
               <Link href="/resources">Resources</Link>

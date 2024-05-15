@@ -55,7 +55,11 @@ export default function IntroductionTemplate() {
     };
 
     const handleSkip = () => {
-        router.push("/main");
+        if (currentStep === 2) {
+            router.push("/journey")
+        } else {
+            router.push("/main");
+        }
     };
 
     return (

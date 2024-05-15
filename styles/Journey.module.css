@@ -1,0 +1,109 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    height: 100%;
+    padding: var(--screenSpacingVertical) var(--screenSpacingHorizontal);
+    position: relative;
+}
+
+.cardKing {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cardQueen {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.firstText {
+    color: var(--white);
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.firstTextContainer {
+    opacity: 0;
+    animation: firstFade ease-in-out 15s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.secondTextContainer {
+    opacity: 0;
+    animation: secondFade 15s ease-in-out 15s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.thirdTextContainer {
+    opacity: 0;
+    animation: thirdFade 3s forwards 30s, popping 1s linear 30s infinite;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clickOverlay {
+    visibility: hidden;
+    animation: overlay 3s forwards 30s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes firstFade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes secondFade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes thirdFade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes popping {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+@keyframes overlay {
+    0% {visibility: hidden;}
+    100% {visibility: visible;}
+}
