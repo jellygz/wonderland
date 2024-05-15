@@ -17,21 +17,23 @@ export default function quizOutro() {
   return (
     <Restrainer>
     <main className={styles.main}>
-        <BreathingText />
-        <Image className={styles.spline} src="/spline_no_bg.gif" alt="Blob" width={650} height={400} />
-            <div className={styles.enterNameContainer}>
-            <p className={styles.enterNameText}>How was your walk? <br /> Do you remember who you are?</p>
-            <input
-                classname={styles.inputBar}
-                onChange={(e) => setInputValue(e.target.value)} 
-                placeholder='Enter your name...' 
-            />
-        <div className={styles.buttonContainer}>
-            <Buttons 
-                buttonName="ENTER"
-                userName = {inputValue}
-                isResult
-            />
+        <div className={styles.container}>
+            <BreathingText />
+            <Image className={styles.spline} src="/spline_no_bg.gif" alt="Blob" width={650} height={400} />
+                <div className={styles.enterNameContainer}>
+                <p className={styles.enterNameText}>How was your walk? <br /> Do you remember who you are?</p>
+                <input
+                    classname={styles.inputBar}
+                    onChange={(e) => setInputValue(e.target.value)} 
+                    placeholder='Enter your name...' 
+                />
+            <div className={styles.buttonContainer}>
+                <Buttons 
+                    buttonName="ENTER"
+                    userName = {inputValue}
+                    isResult
+                />
+            </div>
         </div>
     </div>
     </main>

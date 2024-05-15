@@ -4,7 +4,6 @@
     color: var(--white);
     position: relative;
     overflow: hidden;
-    height: 100%;
 }
 
 .container {
