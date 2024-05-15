@@ -60,8 +60,8 @@ export default function MainNav({isQuizPage}) {
           <p className={styles.about}>&copy; Jillian, Celine</p>
       </nav>
         <div className={styles.icons}>
-          {isQuizPage ? <Image onClick={handleExitOpen} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} /> :
-            <Image onClick={() => router.push("/main")} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
+          {isQuizPage ? <Image className={styles.bunny} onClick={handleExitOpen} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} /> :
+            <Image className={styles.bunny} onClick={() => router.push("/main")} src="/Rabbit Icon.svg" alt="Rabbit" width={35} height={35} />
           }
           <Image className={styles.logo} src="/Wonderland.png" alt="Logo" width={150} height={55} />
           <Image className={styles.hamburger} onClick={handleOpen} src="/Hamburger Menu Icon.svg" alt="Hamburger Menu" width={35} height={35} />

@@ -83,6 +83,7 @@
 
 .about {
     text-align: center;
+    color: var(--white);
 }
 
 .exitOverlay {

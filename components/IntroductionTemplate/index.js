@@ -89,7 +89,7 @@ export default function IntroductionTemplate() {
                 <Image className={styles.progressBar} src={dot} alt="Progress Bar" width={35} height={25} />
                     <div className={styles.skipButtonContainer}>
                         <button onClick={handleSkip} className={styles.skipButton}>
-                            Skip
+                            {currentStep === 2 ? "Start Journey" : "Skip"} 
                         </button>
                     </div>
             </div>
