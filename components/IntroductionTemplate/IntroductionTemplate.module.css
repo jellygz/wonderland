@@ -53,6 +53,10 @@
     align-items: center;
 }
 
+.button {
+    cursor: pointer;
+}
+
 /* .clickContainer {
     position: absolute;
     top: 62%;
