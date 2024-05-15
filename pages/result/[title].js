@@ -72,36 +72,36 @@ export default function Result() {
   const thirdDescriptionValue = (res) => {
     switch(res) {
         case "magician": return (<ul style={{margin: 0, padding:0}}> 
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Set clear, specific goals.</li>
+          <li>Prioritize high-impact tasks.</li>
+          <li>Establish daily routines.</li>
+          <li>Minimize distractions.</li>
+          <li>Seek accountability partners.</li>
+          <li>Visualize achieving goals daily.</li>
           </ul>);
         case "pirate": return (<ul style={{margin: 0, padding:0}}>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Schedule tasks early.</li>
+          <li>Break projects into steps.</li>
+          <li>Use organizational tools.</li>
+          <li>Focus on priorities first.</li>
+          <li>Practice mindfulness daily.</li>
+          <li>Seek feedback regularly.</li>
           </ul>);
         case "archer": return (<ul style={{margin: 0, padding:0}}>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Practice self-compassion daily.</li>
+          <li>Set realistic, achievable goals.</li>
+          <li>Break tasks into steps.</li>
+          <li>Accept mistakes as learning</li>
+          <li>Focus on progress, not perfection.</li>
+          <li>Celebrate small accomplishments.</li>
           </ul>);
         case "warrior": return (<ul style={{margin: 0, padding:0}}>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
-          <li>Ch. 1: Acceptance of Uncertainty</li>
+          <li>Prioritize tasks effectively.</li>
+          <li>Delegate when possible.</li>
+          <li>Set realistic limits.</li>
+          <li>Take regular breaks.</li>
+          <li>Ask for support.</li>
+          <li>Focus on essential tasks.</li>
           </ul>);
     }
   }
