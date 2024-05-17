@@ -24,8 +24,8 @@ export default function Sent() {
                     </div>
                     <div className={styles.buttonsContainer}>
                         <div className={styles.quizButton}>
-                            <Link href="/quizIntro" className={styles.buttonWhite}>
-                                <p>Join Alice...</p>
+                            <Link href="/main" className={styles.buttonWhite}>
+                                <p>Return Home...</p>
                                 <FaArrowRight />
                             </Link>
                         </div>
