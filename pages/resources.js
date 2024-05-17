@@ -47,7 +47,7 @@ export default function Resources() {
             <Link href="/error" className={styles.article}>
                 <div className={styles.articleDescContainer}>
                     <h1 className={styles.articleText}>Article 04</h1>
-                    <p className={styles.articleDesc}>How to combat procrastination based on personality type</p>
+                    <p className={styles.articleDesc}>How to escape Wonderland with Alice</p>
                     <Image className={styles.arrow} src="/Arrow 4.png" alt="Line" width={50} height={400} />
                 </div>
             </Link>
